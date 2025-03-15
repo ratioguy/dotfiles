@@ -1,0 +1,132 @@
+#refresh confs
+super + Escape 
+      pkill -USR1 -x sxhkd
+
+super + shift + c
+      i3-msg reload
+
+#app/script binds
+super + Return
+      alacritty
+
+super + b
+      flatpak run com.brave.Browser
+
+super + e
+     alacritty -e lf
+super + m
+      alacritty -e ncmpcpp
+
+super + n
+      alacritty -e newsboat
+
+super + v 
+      xfce4-popup-clipman
+
+super + y
+      alacritty -e sh .local/bin/youtube-launcher.sh
+
+#volume control
+XF86AudioRaiseVolume
+        pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+
+XF86AudioLowerVolume
+        pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+
+XF86AudioMute
+        pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+
+XF86AudioMicMute
+        pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+
+super + w
+        pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+
+super + s
+        pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+
+super + shift + s
+        pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+
+#screenshot control
+Print
+      xfce4-screenshooter
+
+super + p
+        xfce4-screenshooter
+
+#launcher binds
+super + d
+        rofi -show drun
+
+super + shift + d
+        rofi -show power-menu -modi power-menu:./.local/bin/rofi-power-menu
+
+super + Tab
+        rofi -show window
+
+#window control binds
+super + q
+        i3-msg kill
+
+super + shift + q
+        i3-msg focus parent ; i3-msg kill
+
+super + {h,j,k,l}
+        i3-msg focus {left,down,up,right}
+
+super + shift + {h,j,k,l} 
+      i3-msg move {left,down,up,right}
+
+alt + {h,j,k,l}
+        sh ~/.local/bin/i3resize.sh {left,down,up,right}
+
+super + i
+        i3-msg focus floating
+
+super + shift + i
+        i3-msg focus tiling
+
+super + f
+      i3-msg fullscreen
+
+super + space
+      i3-msg floating toggle
+
+super + a 
+      i3-msg split toggle
+
+super + z
+      i3-msg split horizontal
+
+super + x
+      i3-msg split vertical
+
+super + minus
+      i3-msg move scratchpad
+
+super + equal
+      i3-msg scratchpad show
+
+super + g
+      i3-msg gaps inner all toggle 8 ; i3-msg gaps outer all toggle 8
+
+#music control
+super + backslash
+      playerctl play-pause
+      
+super + bracketleft
+      playerctl previous
+
+super + bracketright
+      playerctl next
+
+#workspace binds
+super + {1-9,0}
+      i3-msg workspace number {1-9,10}
+
+super + shift + {1-9,0}
+      i3-msg move container workspace number {1-9,10}
+
+super + grave
+      i3-msg workspace back_and_forth

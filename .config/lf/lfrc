@@ -1,0 +1,71 @@
+#functions
+cmd mkdir ${{
+  printf "Directory Name: " read ans
+  read ans
+  mkdir $ans }}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+cmd trash-empty ${{
+  trash-empty
+}}
+
+cmd trash-restore ${{
+  trash-restore
+}}
+
+
+# Archive bindings
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.rar) unrar x "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *.7z) 7z e "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+
+cmd z %{{
+    result="$(zoxide query --exclude "$PWD" "$@" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    lf -remote "send $id cd \"$result\""
+}}
+
+cmd zi ${{
+    result="$(zoxide query -i | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    lf -remote "send $id cd \"$result\""
+}}
+
+cmd on-cd &{{
+    zoxide add "$PWD"
+}}
+#bindings
+map t
+map w
+map d
+map m
+map <f-1>
+
+map . set hidden!
+map x cut
+map H cd
+map <f-2> rename
+map zi zi
+map D delete
+map dd $trash "$fx"
+map dr trash-restore "$fx"
+map <delete> $trash "$fx"
+map de trash-empty
+map dl cd ~/.local/share/Trash/files/
+map md mkdir
+map mf mkfile
+map e $nvim "$fx"
+map au unarchive
+map <esc> :quit
+map <enter> open
