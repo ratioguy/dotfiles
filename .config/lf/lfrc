@@ -1,14 +1,19 @@
-#functions
+# Functions
+
+# Create directories command
 cmd mkdir ${{
   printf "Directory Name: " read ans
   read ans
   mkdir $ans }}
 
+# Create file command
 cmd mkfile ${{
   printf "File Name: "
   read ans
   nvim $ans
 }}
+
+# Trash commands
 cmd trash-empty ${{
   trash-empty
 }}
@@ -17,6 +22,18 @@ cmd trash-restore ${{
   trash-restore
 }}
 
+cmd trash-list ${{
+  cd ~/.local/share/Trash/files/ ; lf
+}}
+
+# Phone commands
+cmd phone-mount ${{
+  gio mount -li | awk -F= '{if(index($2,"mtp") == 1)system("gio mount "$2)}'
+}}
+
+cmd phone-storage ${{
+  cd /run/user/1000/gvfs ; lf
+}}
 
 # Archive bindings
 cmd unarchive ${{
@@ -31,7 +48,7 @@ cmd unarchive ${{
   esac
 }}
 
-
+# Zoxide commands/bindings
 cmd z %{{
     result="$(zoxide query --exclude "$PWD" "$@" | sed 's/\\/\\\\/g;s/"/\\"/g')"
     lf -remote "send $id cd \"$result\""
@@ -45,13 +62,13 @@ cmd zi ${{
 cmd on-cd &{{
     zoxide add "$PWD"
 }}
+
 #bindings
 map t
 map w
 map d
 map m
 map <f-1>
-
 map . set hidden!
 map x cut
 map H cd
@@ -63,7 +80,6 @@ map dd $trash "$fx"
 map dr trash-restore "$fx"
 map <delete> $trash "$fx"
 map de trash-empty
-map dl cd ~/.local/share/Trash/files/
 map md mkdir
 map mf mkfile
 map e $nvim "$fx"

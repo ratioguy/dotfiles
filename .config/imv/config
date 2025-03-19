@@ -1,0 +1,40 @@
+[options]
+suppress_default_binds = true
+
+[binds]
+q = quit
+<Escape> = quit
+
+# Image Navigation
+h = prev
+j = zoom -1
+k = zoom 1
+l = next
+
+<Shift+J> = reset
+
+<bracketleft> = prev
+<bracketright> = next
+
+# Panning
+<Down> = pan 0 -50
+<Up> = pan 0 50
+<Left> = pan 50 0
+<Right> = pan -50 0
+
+<equal> = zoom 1
+<minus> = zoom -1
+<Shift+underscore> = reset
+
+# Rotate image by 90 degrees
+r = rotate by 90
+
+# Show image info
+o = overlay
+
+# Fullscreen
+f = fullscreen
+
+# Go to top and bottom
+gg = goto 1
+<Shift+G> = goto -1
