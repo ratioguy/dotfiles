@@ -11,8 +11,6 @@ j = zoom -1
 k = zoom 1
 l = next
 
-<Shift+J> = reset
-
 <bracketleft> = prev
 <bracketright> = next
 
@@ -24,7 +22,6 @@ l = next
 
 <equal> = zoom 1
 <minus> = zoom -1
-<Shift+underscore> = reset
 
 # Rotate image by 90 degrees
 r = rotate by 90
@@ -38,3 +35,6 @@ f = fullscreen
 # Go to top and bottom
 gg = goto 1
 <Shift+G> = goto -1
+
+# Reset image
+u = reset
