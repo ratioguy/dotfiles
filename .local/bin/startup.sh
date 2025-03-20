@@ -9,4 +9,6 @@ ollama serve &
 mpd &
 mpDris2
 playerctld &
-xcape -e 'Control_L=Escape'
+mpc random on &
+mpc load Based\ Music
+xcape -e 'Control_L=Escape' &

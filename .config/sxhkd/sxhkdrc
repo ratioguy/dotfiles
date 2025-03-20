@@ -1,11 +1,11 @@
-#refresh confs
+# Refresh confs
 super + Escape 
       pkill -USR1 -x sxhkd
 
 super + shift + c
       i3-msg reload
 
-#app/script binds
+# App/script binds
 super + Return
       alacritty
 
@@ -26,7 +26,7 @@ super + v
 super + y
       alacritty -T youtube-launcher -e sh .local/bin/youtube-launcher.sh
 
-#volume control
+# Volume control
 XF86AudioRaiseVolume
         pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 
@@ -61,7 +61,7 @@ Print
 super + p
         xfce4-screenshooter
 
-#launcher binds
+# Launcher binds
 super + d
         rofi -show drun
 
@@ -71,7 +71,7 @@ super + shift + d
 super + Tab
         rofi -show window
 
-#window control binds
+# Window control binds
 super + q
         i3-msg kill
 
@@ -79,8 +79,8 @@ super + shift + q
         i3-msg focus parent ; i3-msg kill
 
 super + {h,j,k,l}
-        i3-msg focus {left,down,up,right}
-
+        i3-msg focus {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
+        
 super + shift + {h,j,k,l} 
       i3-msg move {left,down,up,right}
 
@@ -117,7 +117,10 @@ super + equal
 super + g
       i3-msg gaps inner all toggle 8 ; i3-msg gaps outer all toggle 8
 
-#music control
+super + r
+      sh ~/.local/bin/i3-mouse-warping.sh
+
+# Music control
 super + backslash
       playerctl play-pause
       
@@ -127,7 +130,7 @@ super + bracketleft
 super + bracketright
       playerctl next
 
-#workspace binds
+# Workspace binds
 super + {1-9,0}
       i3-msg workspace number {1-9,10}
 
