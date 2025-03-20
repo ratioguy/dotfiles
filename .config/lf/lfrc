@@ -22,22 +22,9 @@ cmd trash-restore ${{
   trash-restore
 }}
 
-cmd trash-list ${{
-  cd ~/.local/share/Trash/files/ ; lf
-}}
-
-# Phone commands
+# Phone command
 cmd phone-mount ${{
   gio mount -li | awk -F= '{if(index($2,"mtp") == 1)system("gio mount "$2)}'
-}}
-
-cmd phone-storage ${{
-  cd /run/user/1000/gvfs ; lf
-}}
-
-# Drive
-cmd drives ${{
-  cd /run/media/ ; lf
 }}
 
 # Archive bindings
@@ -73,7 +60,6 @@ map t
 map w
 map d
 map m
-map i
 map u
 map c :clear ; unselect
 map v :toggle; down
@@ -85,12 +71,15 @@ map <f-2> rename
 map zi zi
 map D delete
 map dd $trash "$fx"
+map dl cd ~/.local/share/Trash/files/
 map dr trash-restore "$fx"
 map <delete> $trash "$fx"
 map de trash-empty
 map md mkdir
 map mf mkfile
 map e $nvim "$fx"
+map i cd /run/media/
+map u cd /run/user/1000/gvfs
 map au unarchive
 map <esc> :quit
 map <enter> open
