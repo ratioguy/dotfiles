@@ -1,3 +1,4 @@
+alias sudo="doas.conf"
 alias sudoedit='doas nvim --clean'
 alias u="sudo xbps-install -Su ; flatpak update"
 alias i="sudo xbps-install -S"
