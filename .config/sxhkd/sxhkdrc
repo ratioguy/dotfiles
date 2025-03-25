@@ -117,9 +117,6 @@ super + equal
 super + g
       i3-msg gaps inner all toggle 8 ; i3-msg gaps outer all toggle 8
 
-super + r
-      sh ~/.local/bin/i3-mouse-warping.sh
-
 # Music control
 super + backslash
       playerctl play-pause

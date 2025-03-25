@@ -78,8 +78,8 @@ map de trash-empty
 map md mkdir
 map mf mkfile
 map e $nvim "$fx"
-map i cd /run/media/
-map u cd /run/user/1000/gvfs
+map sd cd /run/media/
+map sp cd /run/user/1000/gvfs
 map au unarchive
 map <esc> :quit
 map <enter> open
