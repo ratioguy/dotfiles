@@ -1,138 +1,138 @@
 # Refresh confs
 super + Escape 
-      pkill -USR1 -x sxhkd
+  pkill -USR1 -x sxhkd
 
 super + shift + c
-      i3-msg reload
+  i3-msg reload
 
 # App/script binds
 super + Return
-      alacritty
+  alacritty
 
 super + b
-      flatpak run com.brave.Browser
+  flatpak run com.brave.Browser
 
 super + e
-     alacritty -e lf
+  alacritty -e lf
 super + m
-      alacritty -e ncmpcpp
+  alacritty -e ncmpcpp
 
 super + n
-      alacritty -e newsboat
+  alacritty -e newsboat
 
 super + v 
-      xfce4-popup-clipman
+  xfce4-popup-clipman
 
 super + y
-      alacritty -T youtube-launcher -e sh .local/bin/youtube-launcher.sh
+  alacritty -T youtube-launcher -e sh ~/.local/bin/youtube-launcher.sh
 
 # Volume control
 XF86AudioRaiseVolume
-        pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+  pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 
 XF86AudioLowerVolume
-        pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+  pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 
 XF86AudioMute
-        pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+  pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 XF86AudioMicMute
-        pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+  pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 super + w
-        pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+  pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 
 super + s
-        pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+  pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 
 super + shift + s
-        pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+  pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 super + o
-       pactl set-default-sink alsa_output.usb-HP_HP_Speaker_Bar-00.analog-stereo
+  pactl set-default-sink alsa_output.usb-HP_HP_Speaker_Bar-00.analog-stereo
 
 super + shift + o
-       pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo 
+  pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo 
 
 #screenshot control
 Print
-      xfce4-screenshooter
+  xfce4-screenshooter
 
 super + p
-        xfce4-screenshooter
+  xfce4-screenshooter
 
 # Launcher binds
 super + d
-        rofi -show drun
+  rofi -show drun
 
 super + shift + d
-        rofi -show power-menu -modi power-menu:./.local/bin/rofi-power-menu
+  rofi -show power-menu -modi power-menu:./.local/bin/rofi-power-menu
 
 super + Tab
-        rofi -show window
+  rofi -show window
 
 # Window control binds
 super + q
-        i3-msg kill
+  i3-msg kill
 
 super + shift + q
-        i3-msg focus parent ; i3-msg kill
+  i3-msg focus parent ; i3-msg kill
 
 super + {h,j,k,l}
-        i3-msg focus {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg focus {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
         
 super + shift + {h,j,k,l} 
-      i3-msg move {left,down,up,right}
+  i3-msg move {left,down,up,right}
 
 alt + {h,j,k,l}
-        sh ~/.local/bin/i3resize.sh {left,down,up,right}
+  sh ~/.local/bin/i3resize.sh {left,down,up,right}
 
 super + i
-        i3-msg focus floating
+  i3-msg focus floating ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + shift + i
-        i3-msg focus tiling
+  i3-msg focus tiling ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + f
-      i3-msg fullscreen
+  i3-msg fullscreen
 
 super + space
-      i3-msg floating toggle
+  i3-msg floating toggle
 
 super + a 
-      i3-msg split toggle
+  i3-msg split toggle
 
 super + z
-      i3-msg split horizontal
+  i3-msg split horizontal
 
 super + x
-      i3-msg split vertical
+  i3-msg split vertical
 
 super + minus
-      i3-msg move scratchpad
+  i3-msg move scratchpad
 
 super + equal
-      i3-msg scratchpad show
+  i3-msg scratchpad show
 
 super + g
-      i3-msg gaps inner all toggle 8 ; i3-msg gaps outer all toggle 8
+  i3-msg gaps inner all toggle 8 ; i3-msg gaps outer all toggle 8
 
 # Music control
 super + backslash
-      playerctl play-pause
+  playerctl play-pause
       
 super + bracketleft
-      playerctl previous
+  playerctl previous
 
 super + bracketright
-      playerctl next
+  playerctl next
 
 # Workspace binds
 super + {1-9,0}
-      i3-msg workspace number {1-9,10}
+  i3-msg workspace number {1-9,10}
 
 super + shift + {1-9,0}
-      i3-msg move container workspace number {1-9,10}
+  i3-msg move container workspace number {1-9,10}
 
 super + grave
-      i3-msg workspace back_and_forth
+  i3-msg workspace back_and_forth

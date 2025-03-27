@@ -91,6 +91,9 @@ lf () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
+#for urxvt
+clear
+
 # Start zoxide and zsh-syntax-highlighting
 eval "$(zoxide init zsh)"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null

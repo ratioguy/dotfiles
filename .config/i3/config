@@ -27,3 +27,4 @@ for_window [instance="calibre"] floating enable, resize set 700 500, move positi
 for_window [window_type="dialog"] floating enable, move position center
 for_window [title="youtube-launcher"] floating enable, resize set 700 50, move position center
 for_window [title="xarchiver"] floating enable, move position center
+for_window [title="CopyQ"] floating enable, move position center

@@ -1,3 +1,4 @@
+#/bin/sh
 sxhkd &
 xwallpaper --zoom ~/Pictures/wallpapers/atoms.png
 picom & 
