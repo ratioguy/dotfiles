@@ -99,9 +99,6 @@ super + f
 super + space
   i3-msg floating toggle
 
-super + a 
-  i3-msg split toggle
-
 super + z
   i3-msg split horizontal
 
