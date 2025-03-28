@@ -4,7 +4,8 @@
 cmd mkdir ${{
   printf "Directory Name: " read ans
   read ans
-  mkdir $ans }}
+  mkdir $ans
+}}
 
 # Create file command
 cmd mkfile ${{
@@ -66,7 +67,6 @@ map v :toggle; down
 map V invert
 map . set hidden!
 map x cut
-map H cd
 map <f-2> rename
 map zi zi
 map D delete
