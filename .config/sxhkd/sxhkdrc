@@ -84,7 +84,7 @@ super + {h,j,k,l}
 super + shift + {h,j,k,l} 
   i3-msg move {left,down,up,right}
 
-alt + {h,j,k,l}
+super + alt + {h,j,k,l}
   sh ~/.local/bin/i3resize.sh {left,down,up,right}
 
 super + i
