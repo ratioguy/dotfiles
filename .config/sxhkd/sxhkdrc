@@ -75,12 +75,9 @@ super + Tab
 super + q
   i3-msg kill
 
-super + shift + q
-  i3-msg focus parent ; i3-msg kill
-
 super + {h,j,k,l}
   i3-msg focus {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
-        
+  
 super + shift + {h,j,k,l} 
   i3-msg move {left,down,up,right}
 
@@ -117,7 +114,7 @@ super + g
 # Music control
 super + backslash
   playerctl play-pause
-      
+
 super + bracketleft
   playerctl previous
 
