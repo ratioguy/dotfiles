@@ -15,10 +15,10 @@ l = next
 <bracketright> = next
 
 # Panning
-<Down> = pan 0 -50
-<Up> = pan 0 50
-<Left> = pan 50 0
-<Right> = pan -50 0
+<Shift+H> = pan 50 0
+<Shift+J> = pan 0 -50
+<Shift+K> = pan 0 50
+<Shift+L> = pan -50 0
 
 <equal> = zoom 1
 <minus> = zoom -1

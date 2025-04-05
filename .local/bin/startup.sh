@@ -1,6 +1,6 @@
 #/bin/sh
 sxhkd &
-xwallpaper --zoom ~/Pictures/wallpapers/atoms.png
+xwallpaper --zoom ~/Pictures/wallpapers/White-Mountain.jpg
 picom & 
 redshift -O 5500
 nm-applet &
@@ -10,4 +10,4 @@ ollama serve &
 mpd &
 mpDris2
 playerctld &
-xcape -e 'Control_L=Escape' &
+xcape -e 'Control_L=Escape'
