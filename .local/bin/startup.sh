@@ -10,4 +10,4 @@ ollama serve &
 mpd &
 mpDris2
 playerctld &
-xcape -e 'Control_L=Escape'
+xcape -e 'Control_L=Escape' &
