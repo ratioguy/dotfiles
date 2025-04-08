@@ -96,6 +96,9 @@ super + f
 super + space
   i3-msg floating toggle
 
+super + c
+  i3-msg resize set 1270 720 ; i3-msg move container position center
+
 super + z
   i3-msg split horizontal
 
