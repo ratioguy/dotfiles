@@ -97,7 +97,7 @@ super + space
   i3-msg floating toggle
 
 super + c
-  i3-msg resize set 1270 720 ; i3-msg move container position center
+  i3-msg floating enable ; i3-msg resize set 1270 720 ; i3-msg move container position center
 
 super + z
   i3-msg split horizontal
@@ -133,3 +133,11 @@ super + shift + {1-9,0}
 
 super + grave
   i3-msg workspace back_and_forth
+
+# Disable keys
+F11
+  echo f11 >> /dev/null
+
+F1
+  echo f1 >> /dev/null
+
