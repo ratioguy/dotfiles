@@ -20,6 +20,9 @@ super + m
 super + n
   alacritty -e newsboat
 
+super + t
+  alacritty -e htop
+
 super + v 
   xfce4-popup-clipman
 
