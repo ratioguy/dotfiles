@@ -82,7 +82,7 @@ super + {h,j,k,l}
   i3-msg focus {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
   
 super + shift + {h,j,k,l} 
-  i3-msg move {left,down,up,right}
+  i3-msg move {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + alt + {h,j,k,l}
   sh ~/.local/bin/i3resize.sh {left,down,up,right}
@@ -100,7 +100,7 @@ super + space
   i3-msg floating toggle
 
 super + c
-  i3-msg floating enable ; i3-msg resize set 1270 720 ; i3-msg move container position center
+  i3-msg floating enable ; i3-msg resize set 1270 720 ; i3-msg move container position center ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + z
   i3-msg split horizontal
@@ -109,10 +109,10 @@ super + x
   i3-msg split vertical
 
 super + minus
-  i3-msg move scratchpad
+  i3-msg move scratchpad ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + equal
-  i3-msg scratchpad show
+  i3-msg scratchpad show ; sh ~/.local/bin/i3-mouse-warping.sh 
 
 super + g
   i3-msg gaps inner all toggle 8 ; i3-msg gaps outer all toggle 8
