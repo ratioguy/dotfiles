@@ -1,21 +1,24 @@
-#startup applications
+# Startup applications
 exec --no-startup-id sh ~/.local/bin/startup.sh
 
-#set font 
+# Warp mouse to output
+mouse_warping output
+
+# Set font 
 font pango:LiterationMono Nerd Font 10
 
-#set win+drag key
+# Set win+drag key
 floating_modifier Mod4
 
-#gaps size
+# Gaps size
 gaps inner 8
 gaps outer 8
 
-#outline
+# Outline
 for_window [class="^.*"] border pixel 3
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #d79920 #d79920 #ffffff #d79920   #d79920
+# Class
+client.focused #d79920 #d79920 #ffffff #d79920   #d79920
 
 #floating apps
 for_window [class="pavucontrol"] floating enable, move position center
