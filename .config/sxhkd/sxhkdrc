@@ -10,7 +10,7 @@ super + Return
   alacritty
 
 super + b
-  flatpak run com.brave.Browser
+  flatpak run io.gitlab.librewolf-community
 
 super + e
   alacritty -e lf
@@ -76,13 +76,17 @@ super + Tab
 
 # Window control binds
 super + q
-  i3-msg kill
+  i3-msg kill ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + {h,j,k,l}
   i3-msg focus {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
   
 super + shift + {h,j,k,l} 
   i3-msg move {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
+
+alt + shift + {h,j,k,l} 
+  i3-msg move {left,down,up,right} 20 ; sh ~/.local/bin/i3-mouse-warping.sh
+
 
 super + alt + {h,j,k,l}
   sh ~/.local/bin/i3resize.sh {left,down,up,right}
@@ -94,10 +98,10 @@ super + shift + i
   i3-msg focus tiling ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + f
-  i3-msg fullscreen
+  i3-msg fullscreen ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + space
-  i3-msg floating toggle
+  i3-msg floating toggle ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + c
   i3-msg floating enable ; i3-msg resize set 1270 720 ; i3-msg move container position center ; sh ~/.local/bin/i3-mouse-warping.sh
@@ -129,10 +133,10 @@ super + bracketright
 
 # Workspace binds
 super + {1-9,0}
-  i3-msg workspace number {1-9,10}
+  i3-msg workspace number {1-9,10} ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + shift + {1-9,0}
   i3-msg move container workspace number {1-9,10}
 
 super + grave
-  i3-msg workspace back_and_forth
+  i3-msg workspace back_and_forth ; sh ~/.local/bin/i3-mouse-warping.sh

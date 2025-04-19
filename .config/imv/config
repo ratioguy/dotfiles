@@ -27,7 +27,7 @@ l = next
 r = rotate by 90
 
 # Show image info
-o = overlay
+i = overlay
 
 # Fullscreen
 f = fullscreen

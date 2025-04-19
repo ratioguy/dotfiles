@@ -28,9 +28,9 @@ color listfocus_unread yellow default bold
 color info red black bold
 color article white default bold
 
-browser "flatpak run com.brave.Browser %u"
+browser "flatpak run io.gitlab.librewolf-community"
 macro y set browser "setsid -f mpv --no-terminal" ; open-in-browser ; set browser
-macro b set browser "flatpak run com.brave.Browser %u" ; open-in-browser ; set browser
+macro b set browser "flatpak run io.gitlab.librewolf-community" ; open-in-browser ; set browser
 
 highlight all "---.*---" yellow
 highlight feedlist ".*(0/0))" black

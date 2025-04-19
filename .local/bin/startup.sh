@@ -12,4 +12,3 @@ mpDris2
 playerctld &
 mpc random on &
 mpc load Based\ Music &
-xcape -e 'Control_L=Escape' &
