@@ -84,10 +84,6 @@ super + {h,j,k,l}
 super + shift + {h,j,k,l} 
   i3-msg move {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
 
-alt + shift + {h,j,k,l} 
-  i3-msg move {left,down,up,right} 20 ; sh ~/.local/bin/i3-mouse-warping.sh
-
-
 super + alt + {h,j,k,l}
   sh ~/.local/bin/i3resize.sh {left,down,up,right}
 
