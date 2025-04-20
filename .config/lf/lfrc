@@ -84,6 +84,7 @@ map gd cd ~/Downloads
 map gp cd ~/Pictures/
 map gc cd ~/.config/
 map gs cd ~/Sync/
+map gm cd ~/Music/
 map au unarchive
 map <esc> :quit
 map <enter> open
