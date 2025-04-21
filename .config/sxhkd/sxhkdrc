@@ -7,21 +7,23 @@ super + shift + c
 
 # App/script binds
 super + Return
-  alacritty
+ alacritty & sleep 0.10 ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + b
-  flatpak run io.gitlab.librewolf-community
+  flatpak run io.gitlab.librewolf-community ; sleep 0.10s ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + e
-  alacritty -e lf
+  alacritty -e lf & ; sleep 0.10s ; sh ~/.local/bin/i3-mouse-warping.sh
+
 super + m
-  alacritty -e ncmpcpp
+  alacritty -e ncmpcpp & ; sleep 0.10s ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + n
-  alacritty -e newsboat
+  alacritty -e newsboat & ; sleep 0.10s ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + t
-  alacritty -e htop
+  alacritty -e htop & ; sleep 0.10s ; sh ~/.local/bin/i3-mouse-warping.sh
+
 
 super + v 
   xfce4-popup-clipman
@@ -66,17 +68,17 @@ super + p
 
 # Launcher binds
 super + d
-  rofi -show drun
+  rofi -show drun ; sleep 0.15 ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + shift + d
   rofi -show power-menu -modi power-menu:./.local/bin/rofi-power-menu
 
 super + Tab
-  rofi -show window
+  rofi -show window ; sleep 0.20 ; sh ~/.local/bin/i3-mouse-warping.sh
 
 # Window control binds
 super + q
-  i3-msg kill ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg kill ; sleep 0.01s ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + {h,j,k,l}
   i3-msg focus {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
@@ -85,7 +87,7 @@ super + shift + {h,j,k,l}
   i3-msg move {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + alt + {h,j,k,l}
-  sh ~/.local/bin/i3resize.sh {left,down,up,right}
+  sh ~/.local/bin/i3resize.sh {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + i
   i3-msg focus floating ; sh ~/.local/bin/i3-mouse-warping.sh
@@ -115,7 +117,8 @@ super + equal
   i3-msg scratchpad show ; sh ~/.local/bin/i3-mouse-warping.sh 
 
 super + g
-  i3-msg gaps inner all toggle 8 ; i3-msg gaps outer all toggle 8
+  i3-msg gaps inner all toggle 8 ; i3-msg gaps outer all toggle 8 ; sh ~/.local/bin/i3-mouse-warping.sh
+
 
 # Music control
 super + backslash
