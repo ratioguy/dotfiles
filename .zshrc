@@ -3,7 +3,7 @@ autoload -U colors && colors
 
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$fg[white]%}$%b "
 
-#set $TERM 
+# Set $TERM 
 export TERM=xterm-256color
 
 #history

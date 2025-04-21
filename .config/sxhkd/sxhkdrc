@@ -7,22 +7,22 @@ super + shift + c
 
 # App/script binds
 super + Return
- alacritty & sleep 0.10 ; sh ~/.local/bin/i3-mouse-warping.sh
+ alacritty & sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + b
-  flatpak run io.gitlab.librewolf-community ; sleep 0.10s ; sh ~/.local/bin/i3-mouse-warping.sh
+  flatpak run io.gitlab.librewolf-community ; sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + e
-  alacritty -e lf & ; sleep 0.10s ; sh ~/.local/bin/i3-mouse-warping.sh
+  alacritty -e lf & ; sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + m
-  alacritty -e ncmpcpp & ; sleep 0.10s ; sh ~/.local/bin/i3-mouse-warping.sh
+  alacritty -e ncmpcpp & ; sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + n
-  alacritty -e newsboat & ; sleep 0.10s ; sh ~/.local/bin/i3-mouse-warping.sh
+  alacritty -e newsboat & ; sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
 
 super + t
-  alacritty -e htop & ; sleep 0.10s ; sh ~/.local/bin/i3-mouse-warping.sh
+  alacritty -e htop & ; sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
 
 
 super + v 
