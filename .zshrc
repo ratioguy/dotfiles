@@ -6,7 +6,7 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 # Set $TERM 
 export TERM=xterm-256color
 
-#history
+# History
 HISTFILE=~/.cache/zsh_history
 HISTSIZE=5000
 SAVEHIST=5000

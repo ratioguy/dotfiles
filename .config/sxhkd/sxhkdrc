@@ -24,6 +24,8 @@ super + n
 super + t
   alacritty -e htop & ; sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
 
+super + u
+  alacritty -T pulsemixer -e pulsemixer & ; sleep ; sh ~/.local/bin/i3-mouse-warping
 
 super + v 
   xfce4-popup-clipman
