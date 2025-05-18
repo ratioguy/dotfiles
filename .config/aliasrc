@@ -1,3 +1,5 @@
+# My alias
+
 alias sudo="doas"
 alias sudoedit='doas nvim --clean'
 alias u="sudo xbps-install -Su ; flatpak update"
@@ -20,4 +22,4 @@ alias l3="ollama run llama3.2"
 alias youtube-launcher="sh ~/.local/bin/youtube-launcher.sh ; exit"
 alias dmpv="setsid -f mpv --no-terminal"
 alias convert="magick"
-alias bc="bc -l"
+alias bc="bc -l -q"

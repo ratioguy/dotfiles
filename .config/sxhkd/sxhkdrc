@@ -68,6 +68,9 @@ Print
 super + p
   xfce4-screenshooter
 
+super + shift + p
+   xfce4-screenshooter -f -s ~/Pictures/Screenshots
+
 # Launcher binds
 super + d
   rofi -show drun ; sleep 0.15 ; sh ~/.local/bin/i3-mouse-warping.sh
@@ -119,7 +122,7 @@ super + equal
   i3-msg scratchpad show ; sh ~/.local/bin/i3-mouse-warping.sh 
 
 super + g
-  i3-msg gaps inner all toggle 8 ; i3-msg gaps outer all toggle 8 ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg gaps inner all toggle 5 ; i3-msg gaps outer all toggle 5 ; sh ~/.local/bin/i3-mouse-warping.sh
 
 
 # Music control

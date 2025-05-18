@@ -11,8 +11,8 @@ font pango:LiterationMono Nerd Font 10
 floating_modifier Mod4
 
 # Gaps size
-gaps inner 8
-gaps outer 8
+gaps inner 5
+gaps outer 5
 
 # Outline
 for_window [class="^.*"] border pixel 3
