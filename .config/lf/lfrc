@@ -71,6 +71,9 @@ map gp cd ~/Pictures/
 map gc cd ~/.config/
 map gs cd ~/Sync/
 map gm cd ~/Music/
+map gl  cd ~/.local/
+map gb cd ~/.local/bin/
+map gy cd ~/Downloads/Youtube/
 map au unarchive
 map <esc> :quit
 map <enter> open
