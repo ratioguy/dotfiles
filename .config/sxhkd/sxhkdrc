@@ -127,7 +127,7 @@ super + g
 
 # Music control
 super + backslash
-  playerctl play-pause
+  playerctl play-pause -i firefox
 
 super + bracketleft
   playerctl previous

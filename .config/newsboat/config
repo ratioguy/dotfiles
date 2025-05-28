@@ -32,8 +32,8 @@ color article white default bold
 browser "flatpak run io.gitlab.librewolf-community"
 macro y set browser "setsid -f mpv --no-terminal" ; open-in-browser ; set browser
 macro b set browser "flatpak run io.gitlab.librewolf-community" ; open-in-browser ; set browser
-macro 1 set browser "yt-dlp -P ~/Downloads/Youtube/ --merge-output-format mp4 -f 'bestvideo[height<=?1080]+bestaudio/best' --sponsorblock-remove sponsor,intro,outro,interaction,selfpromo --exec 'setsid -f mpv --no-terminal'" ; open-in-browser ; set browser
-macro 7 set browser "yt-dlp -P ~/Downloads/Youtube/ --merge-output-format mp4 -f 'bestvideo[height<=?720]+bestaudio/best' --sponsorblock-remove sponsor,intro,outro,interaction,selfpromo --exec 'setsid -f mpv --no-terminal'" ; open-in-browser ; set browser
+macro 1 set browser "yt-dlp -P ~/Downloads/Youtube/ --merge-output-format mp4 -f 'bestvideo[height<=?1080]+bestaudio/best' --sponsorblock-remove sponsor,intro,outro,interaction,selfpromo,preview --exec 'setsid -f mpv --no-terminal'" ; open-in-browser ; set browser
+macro 7 set browser "yt-dlp -P ~/Downloads/Youtube/ --merge-output-format mp4 -f 'bestvideo[height<=?720]+bestaudio/best' --sponsorblock-remove sponsor,intro,outro,interaction,selfpromo,preview --exec 'setsid -f mpv --no-terminal'" ; open-in-browser ; set browser
  
 highlight all "---.*---" yellow
 highlight feedlist ".*(0/0))" black
