@@ -1,16 +1,20 @@
 [options]
+
+# Get rid of default bindings;
 suppress_default_binds = true
 
 [binds]
 q = quit
 <Escape> = quit
 
-# Image Navigation
+# Image navigation shortcuts
 h = prev
 j = zoom -1
 k = zoom 1
 l = next
 
+
+# Moving to next and previous image
 <bracketleft> = prev
 <bracketright> = next
 
@@ -20,6 +24,8 @@ l = next
 <Shift+K> = pan 0 50
 <Shift+L> = pan -50 0
 
+
+# Zooming
 <equal> = zoom 1
 <minus> = zoom -1
 

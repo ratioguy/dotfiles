@@ -47,7 +47,7 @@ cmd on-cd &{{
     zoxide add "$PWD"
 }}
 
-#bindings
+# Bindings
 map t
 map w
 map d

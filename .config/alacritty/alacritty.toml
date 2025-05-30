@@ -1,13 +1,9 @@
-# Colors (Gruvbox dark)
+# Gruvbox Theming
 
-# Default colors
 [colors.primary]
-# hard contrast background = = '#1d2021'
 background = '#282828'
-# soft contrast background = = '#32302f'
 foreground = '#ebdbb2'
 
-# Normal colors
 [colors.normal]
 black   = '#282828'
 red     = '#cc241d'
@@ -18,7 +14,6 @@ magenta = '#b16286'
 cyan    = '#689d6a'
 white   = '#a89984'
 
-# Bright colors
 [colors.bright]
 black   = '#928374'
 red     = '#fb4934'
@@ -29,9 +24,11 @@ magenta = '#d3869b'
 cyan    = '#8ec07c'
 white   = '#ebdbb2'
 
+# Transparency
 [window]
 opacity = 0.95
 
+# Font config
 [font]
 normal.family = "LiterationMono  Nerd Font"
 bold.family = " LiterationMonoNerd Font"
@@ -40,6 +37,8 @@ bold_italic.family = "LiterationMono Nerd Font"
 
 size = 10.5
 
+
+# Add bindings
 [keyboard]
 bindings = [
     { key="ArrowUp", mods="Control|Shift", action="ScrollLineUp" },

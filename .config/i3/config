@@ -20,7 +20,7 @@ for_window [class="^.*"] border pixel 3
 # Class
 client.focused #d79920 #d79920 #ffffff #d79920   #d79920
 
-#floating apps
+# Floating apps
 for_window [class="pavucontrol"] floating enable, move position center
 for_window [class="Qalculate"] floating enable, move position center
 for_window [instance="mupdf"] floating enable, move position center
