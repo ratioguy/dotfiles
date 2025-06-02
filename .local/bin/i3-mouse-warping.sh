@@ -1,4 +1,5 @@
 #!/bin/sh
+
 set -e
 
 output=$(xdotool getactivewindow getwindowgeometry --shell) 
