@@ -10,7 +10,8 @@ master_width            : 50 # Percentage of screen width
 resize_master_amount    : 5
 snap_distance           : 5
 motion_throttle         : 60 # Set to screen refresh rate for smoothest motions
-should_float            : st 
+should_float            : "mpv,imv,mupdf,dialog,youtube-launcher,gimp-file-open,pulsemixer"
+new_win_focus           : true
 
 # Keybinds:
 # Commands must be surrounded with ""
@@ -72,8 +73,8 @@ call : mod + shift + j : master_next
 call : mod + shift + k : master_previous
 
 # Master Area Resize
-call : mod + l : master_increase
-call : mod + h : master_decrease
+call : mod + alt + l : master_increase
+call : mod + alt + h : master_decrease
 
 # Gaps 
 call : mod + equal : increase_gaps

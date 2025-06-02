@@ -1,5 +1,6 @@
 # Startup applications
 exec --no-startup-id sh ~/.local/bin/startup.sh
+#exec --no-startup-id sh ~/.local/bin/monitor.sh
 
 # Warp mouse to output
 mouse_warping output
@@ -21,8 +22,6 @@ for_window [class="^.*"] border pixel 3
 client.focused #d79920 #d79920 #ffffff #d79920   #d79920
 
 # Floating apps
-for_window [class="pavucontrol"] floating enable, move position center
-for_window [class="Qalculate"] floating enable, move position center
 for_window [instance="mupdf"] floating enable, move position center
 for_window [instance="imv"] floating enable, move position center
 for_window [class="mpv"] floating enable, resize set 1280 720, move position center
