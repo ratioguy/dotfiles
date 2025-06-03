@@ -12,6 +12,7 @@ snap_distance           : 5
 motion_throttle         : 60 # Set to screen refresh rate for smoothest motions
 should_float            : "mpv,imv,mupdf,dialog,youtube-launcher,gimp-file-open,pulsemixer"
 new_win_focus           : true
+warp_cursor             : true
 
 # Keybinds:
 # Commands must be surrounded with ""
