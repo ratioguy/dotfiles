@@ -37,7 +37,6 @@ bold_italic.family = "LiterationMono Nerd Font"
 
 size = 10.5
 
-
 # Add bindings
 [keyboard]
 bindings = [
@@ -46,5 +45,5 @@ bindings = [
     { key="Home", mods="Control|Shift", action="ScrollPageUp" },
     { key="End", mods="Control|Shift", action="ScrollPageDown" },
     { key="k", mods="Control|Shift", action="ScrollLineUp" },
-    { key="j", mods="Control|Shift", action="ScrollLineDown" }
+    { key="j", mods="Control|Shift", action="ScrollLineDown" },
 ]

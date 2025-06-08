@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 [ -z "$1" ] && echo "No direction provided" && exit 1
 distanceStr="5 px or 5 ppt"

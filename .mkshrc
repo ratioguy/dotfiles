@@ -1,0 +1,10 @@
+PS1="[\$USER@$(hostname) \$PWD]$ "
+
+source ~/.config/aliasrc
+bind '^L'=clear-screen
+
+lf () {
+    cd "$(command lf -print-last-dir "$@")"
+}
+
+eval "$(zoxide init posix --hook prompt)"

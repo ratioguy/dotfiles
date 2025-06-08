@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 sxhkd &
 xwallpaper --zoom ~/Pictures/wallpapers/White-Mountain.jpg

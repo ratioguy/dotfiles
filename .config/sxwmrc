@@ -12,6 +12,7 @@ snap_distance           : 5
 motion_throttle         : 60 # Set to screen refresh rate for smoothest motions
 should_float            : "mpv,imv,mupdf,dialog,youtube-launcher,gimp-file-open,pulsemixer"
 new_win_focus           : true
+warp_cursor             : true
 
 # Keybinds:
 # Commands must be surrounded with ""
@@ -25,7 +26,7 @@ call : mod + shift + c : reload_config
 # Launcher Binds
 bind : mod + d : "rofi -show drun"
 bind : mod + shift + d : "rofi -show power-menu -modi power-menu:./.local/bin/rofi-power-menu"
-bind : mod + tab : "rofi -show window ; sleep 0.20 ; sh ~/.local/bin/i3-mouse-warping.sh"
+bind : mod + tab : "rofi -show window"
 
 # App/script binds
 bind : mod + Return : "alacritty"
@@ -75,6 +76,10 @@ call : mod + shift + k : master_previous
 # Master Area Resize
 call : mod + alt + l : master_increase
 call : mod + alt + h : master_decrease
+
+# Stack Window Resize
+call : mod + alt + k : stack_increase
+call : mod + alt + j : stack_decrease
 
 # Gaps 
 call : mod + equal : increase_gaps
