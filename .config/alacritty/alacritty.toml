@@ -31,7 +31,7 @@ opacity = 0.95
 # Font config
 [font]
 normal.family = "LiterationMono  Nerd Font"
-bold.family = " LiterationMonoNerd Font"
+bold.family = " LiterationMono Nerd Font"
 italic.family = "LiterationMono Nerd Font"
 bold_italic.family = "LiterationMono Nerd Font"
 
