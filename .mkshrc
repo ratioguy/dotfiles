@@ -1,14 +1,21 @@
+# PS1
 PS1="[\$USER@$(hostname) \$PWD]$ "
 
+# History file
 HISTFILE=~/.cache/mksh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
+# Source aliases from aliasrc
 source ~/.config/aliasrc
+
+# Make ctrl + L work
 bind '^L'=clear-screen
 
+# Make lf cd on exit
 lf () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
+# Make zoxide load
 eval "$(zoxide init posix --hook prompt)"
