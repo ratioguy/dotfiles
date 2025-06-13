@@ -1,5 +1,9 @@
 PS1="[\$USER@$(hostname) \$PWD]$ "
 
+HISTFILE=~/.cache/mksh_history
+HISTSIZE=5000
+SAVEHIST=5000
+
 source ~/.config/aliasrc
 bind '^L'=clear-screen
 
