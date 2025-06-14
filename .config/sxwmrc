@@ -8,12 +8,13 @@ gaps                    : 5
 border_width            : 3
 master_width            : 50 # Percentage of screen width
 resize_master_amount    : 5
+resize_stack_amt        : 5
 snap_distance           : 5
 motion_throttle         : 60 # Set to screen refresh rate for smoothest motions
-should_float            : "mpv,imv,mupdf,dialog,youtube-launcher,gimp-file-open,pulsemixer"
+should_float            : "imv,mupdf,dialog,youtube-launcher,gimp-file-open,pulsemixer,thunar"
 new_win_focus           : true
 warp_cursor             : true
-exec                    : ""
+#exec                    : ""
 
 # Keybinds:
 # Commands must be surrounded with ""
@@ -30,15 +31,15 @@ bind : mod + shift + d : "rofi -show power-menu -modi power-menu:./.local/bin/ro
 bind : mod + tab : "rofi -show window"
 
 # App/script binds
-bind : mod + Return : "alacritty"
+bind : mod + Return : "st"
 bind : mod + b : "flatpak run io.gitlab.librewolf-community"
-bind : mod + e : "alacritty -e lf"
-bind : mod + m : "alacritty -e ncmpcpp"
-bind : mod + n : "alacritty -e newsboat"
-bind : mod + t : "alacritty -e htop"
-bind : mod + u : "alacritty -T pulsemixer -e pulsemixer"
+bind : mod + e : "st -e lf"
+bind : mod + m : "st -e ncmpcpp"
+bind : mod + n : "st -e newsboat"
+bind : mod + t : "st -e htop"
+bind : mod + u : "st -c pulsemixer -e pulsemixer"
 #bind : mod + v : "  xfce4-popup-clipman"
-bind : mod + y : "alacritty -T youtube-launcher -e sh ~/.local/bin/youtube-launcher.sh"
+bind : mod + y : "st -c youtube-launcher -e sh ~/.local/bin/youtube-launcher.sh"
 
 # Volume Control 
 bind : 0x1008ff13 : "pactl set-sink-volume 0 +5%"
@@ -57,9 +58,9 @@ bind : mod + shift + o : "pactl set-default-sink alsa_output.pci-0000_00_1f.3.an
 
 
 # Music Control
-bind : mod + 0x5c : "playerctl play-pause"
-bind : mod + bracketright : "playerctl next"
-bind : mod + bracketleft : "playerctl previous"
+bind : mod + 0x5c : "sh ~/.local/bin/playerctl-play-pause.sh"
+bind : mod + bracketright : "sh ~/.local/bin/playerctl-next.sh"
+bind : mod + bracketleft : "sh ~/.local/bin/playerctl-play-prev.sh"
 
 
 # Window Management:
