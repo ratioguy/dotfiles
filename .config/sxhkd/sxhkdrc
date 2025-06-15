@@ -7,31 +7,31 @@ super + shift + c
 
 # App/script binds
 super + Return
- alacritty & sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
+ st
 
 super + b
-  flatpak run io.gitlab.librewolf-community ; sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
+  flatpak run io.gitlab.librewolf-community 
 
 super + e
-  alacritty -e lf & ; sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
+  st -e lf & 
 
 super + m
-  alacritty -e ncmpcpp & ; sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
+  st -e ncmpcpp
 
 super + n
-  alacritty -e newsboat & ; sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
+  st -e newsboat
 
 super + t
-  alacritty -e htop & ; sleep 0.15s ; sh ~/.local/bin/i3-mouse-warping.sh
+  st -e htop
 
 super + u
-  alacritty -T pulsemixer -e pulsemixer & ; sleep ; sh ~/.local/bin/i3-mouse-warping
+  st -t pulsemixer -e pulsemixer
 
 super + v 
   xfce4-popup-clipman
 
 super + y
-  alacritty -T youtube-launcher -e sh ~/.local/bin/youtube-launcher.sh
+  st -t youtube-launcher -e sh ~/.local/bin/youtube-launcher.sh
 
 # Volume control
 XF86AudioRaiseVolume
@@ -73,41 +73,41 @@ super + shift + p
 
 # Launcher binds
 super + d
-  rofi -show drun ; sleep 0.15 ; sh ~/.local/bin/i3-mouse-warping.sh
+  rofi -show drun
 
 super + shift + d
   rofi -show power-menu -modi power-menu:./.local/bin/rofi-power-menu
 
 super + Tab
-  rofi -show window ; sleep 0.20 ; sh ~/.local/bin/i3-mouse-warping.sh
+  rofi -show window 
 
 # Window control binds
 super + q
-  i3-msg kill ; sleep 0.01s ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg kill 
 
 super + {h,j,k,l}
-  i3-msg focus {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg focus {left,down,up,right} 
   
 super + shift + {h,j,k,l} 
-  i3-msg move {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg move {left,down,up,right} 
 
 super + alt + {h,j,k,l}
-  sh ~/.local/bin/i3resize.sh {left,down,up,right} ; sh ~/.local/bin/i3-mouse-warping.sh
+  sh ~/.local/bin/i3resize.sh {left,down,up,right} 
 
 super + i
-  i3-msg focus floating ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg focus floating 
 
 super + shift + i
-  i3-msg focus tiling ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg focus tiling 
 
 super + f
-  i3-msg fullscreen ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg fullscreen 
 
 super + space
-  i3-msg floating toggle ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg floating toggle 
 
 super + c
-  i3-msg floating enable ; i3-msg resize set 1270 720 ; i3-msg move container position center ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg floating enable ; i3-msg resize set 1270 720 ; i3-msg move container position center 
 
 super + z
   i3-msg split horizontal
@@ -116,13 +116,13 @@ super + x
   i3-msg split vertical
 
 super + minus
-  i3-msg move scratchpad ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg move scratchpad 
 
 super + equal
-  i3-msg scratchpad show ; sh ~/.local/bin/i3-mouse-warping.sh 
+  i3-msg scratchpad show  
 
 super + g
-  i3-msg gaps inner all toggle 5 ; i3-msg gaps outer all toggle 5 ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg gaps inner all toggle 5 ; i3-msg gaps outer all toggle 5 
 
 
 # Music control
@@ -137,10 +137,10 @@ super + bracketright
 
 # Workspace binds
 super + {1-9,0}
-  i3-msg workspace number {1-9,10} ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg workspace number {1-9,10} 
 
 super + shift + {1-9,0}
   i3-msg move container workspace number {1-9,10}
 
 super + grave
-  i3-msg workspace back_and_forth ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg workspace back_and_forth 
