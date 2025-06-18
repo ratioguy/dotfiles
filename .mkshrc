@@ -17,8 +17,5 @@ lf () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
-# Manpager
-export MANPAGER='nvim +Man!'
-
 # Make zoxide load
 eval "$(zoxide init posix --hook prompt)"
