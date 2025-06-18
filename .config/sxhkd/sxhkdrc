@@ -1,5 +1,5 @@
 # Refresh confs
-super + Escape 
+super + + Escape 
   pkill -USR1 -x sxhkd
 
 super + shift + c

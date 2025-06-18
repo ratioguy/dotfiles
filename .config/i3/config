@@ -2,9 +2,6 @@
 exec --no-startup-id sh ~/.local/bin/startup.sh
 #exec --no-startup-id sh ~/.local/bin/monitor.sh
 
-# Warp mouse to output
-mouse_warping output
-
 # Set font 
 font pango:LiterationMono Nerd Font 10
 
