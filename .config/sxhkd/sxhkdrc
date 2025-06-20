@@ -76,7 +76,7 @@ super + d
   python ~/.local/bin/dmenu_drun 
 
 super + shift + d
-  rofi -show power-menu -modi power-menu:./.local/bin/rofi-power-menu
+  sh ~/.local/bin/dmenu-power-menu.sh
 
 super + Tab
   rofi -show window 
