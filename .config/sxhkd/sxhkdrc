@@ -1,5 +1,5 @@
 # Refresh confs
-super + Escape 
+super + r 
   pkill -USR1 -x sxhkd
 
 super + shift + c
@@ -73,7 +73,7 @@ super + shift + p
 
 # Launcher binds
 super + d
-  rofi -show drun 
+  python ~/.local/bin/dmenu_drun 
 
 super + shift + d
   rofi -show power-menu -modi power-menu:./.local/bin/rofi-power-menu
@@ -131,5 +131,5 @@ super + {1-9,0}
 super + shift + {1-9,0}
   i3-msg move container workspace number {1-9,10}
 
-super + grave
+super + Escape
   i3-msg workspace back_and_forth 
