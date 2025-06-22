@@ -76,10 +76,7 @@ super + d
   python ~/.local/bin/dmenu_drun 
 
 super + shift + d
-  sh ~/.local/bin/dmenu-power-menu.sh
-
-super + Tab
-  rofi -show window 
+  bash ~/.local/bin/dmenu-power-menu.sh
 
 # Window control binds
 super + q

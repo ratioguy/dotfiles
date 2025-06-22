@@ -9,7 +9,7 @@ border_width            : 3
 master_width            : 50 # Percentage of screen width
 resize_master_amount    : 5
 resize_stack_amt        : 5
-snap_distance           : 5
+#snap_distance          : 0
 motion_throttle         : 60 # Set to screen refresh rate for smoothest motions
 should_float            : "mpv,imv,mupdf,dialog,youtube-launcher,gimp-file-open,pulsemixer,thunar"
 new_win_focus           : true

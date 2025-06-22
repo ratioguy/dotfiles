@@ -1,19 +1,14 @@
-#!/usr/bin/env bash
+#!/bin/bash
+result=$(echo -e "Shutdown\nReboot\nSuspend\nLock\nLogout" | dmenu -i -l 5 -p power)
 
-function powermenu {
-	options="Cancel\nShutdown\nRestart\nSleep\nLock"
-	selected=$(echo $options | dmenu -i)
-	if [[ $selected = "Shutdown" ]]; then
-		loginctl poweroff
-	elif [[ $selected = "Restart" ]]; then
-		loginctl reboot
-	elif [[ $selected = "Sleep" ]]; then
-		loginctl suspend
-	elif [[ $selected = "Lock" ]]; then
-		slock
-	elif [[ $selected = "Cancel" ]]; then
-		return
-	fi
-}
-
-powermenu
+if [[ "${result}" = "Shutdown" ]]; then
+  loginctl poweroff
+elif [[ "${result}" = "Reboot" ]]; then
+  loginctl reboot
+elif [[ "${result}" = "Suspend" ]]; then
+  loginctl suspend
+elif [[ "${result}" = "Lock" ]]; then
+  loginctl lock-session ${XDG_SESSION_ID-}
+elif [[ "${result}" = "Logout" ]]; then
+  loginctl terminate-session
+fi
