@@ -25,3 +25,6 @@ vim.cmd('inoremap ` ``<Esc>ha')
 
 -- Case insenitive searching
 vim.o.ignorecase = true 
+
+-- Set number width
+vim.o.numberwidth = 1
