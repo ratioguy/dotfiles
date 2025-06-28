@@ -6,6 +6,9 @@ HISTFILE=~/.cache/mksh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
+# Set manpager to neovim
+export MANPAGER='nvim +Man!'
+
 # Source aliases from aliasrc
 source ~/.config/aliasrc
 

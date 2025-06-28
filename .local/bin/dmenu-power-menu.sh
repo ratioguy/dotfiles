@@ -10,5 +10,5 @@ elif [[ "${result}" = "Suspend" ]]; then
 elif [[ "${result}" = "Lock" ]]; then
   loginctl lock-session ${XDG_SESSION_ID-}
 elif [[ "${result}" = "Logout" ]]; then
-  loginctl terminate-session
+  loginctl terminate-session ${XDG_SESSION_ID-}
 fi

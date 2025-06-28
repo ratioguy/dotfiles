@@ -42,9 +42,9 @@ bind : mod + u : "st -c pulsemixer -e pulsemixer"
 bind : mod + y : "st -c youtube-launcher -e sh ~/.local/bin/youtube-launcher.sh"
 
 # Volume Control 
-bind : 0x1008ff13 : "pactl set-sink-volume 0 +5%"
-bind : 0x1008ff11 : "pactl set-sink-volume 0 -5%"
-bind : 0x1008ff12 : "pactl set-sink-mute 0 toggle "
+bind : XF86AudioRaiseVolume : "pactl set-sink-volume 0 +5%"
+bind : XF86AudioLowerVolume : "pactl set-sink-volume 0 -5%"
+bind : XF86AudioMuteVolume : "pactl set-sink-mute 0 toggle "
 bind : mod + w : "pactl set-sink-volume @DEFAULT_SINK@ +5%"
 bind : mod + s : "pactl set-sink-volume @DEFAULT_SINK@ -5%"
 bind : mod + shift + s : "pactl set-sink-mute @DEFAULT_SINK@ toggle"
@@ -84,12 +84,12 @@ call : mod + alt + k : stack_increase
 call : mod + alt + j : stack_decrease
 
 # Gaps 
-call : mod + equal : increase_gaps
-call : mod + minus : decrease_gaps
+#call : mod + equal : increase_gaps
+#call : mod + minus : decrease_gaps
 
 # Floating/Fullscreen
 call : mod + space : toggle_floating
-call : mod + shift + space : global_floating
+#call : mod + shift + space : global_floating
 call : mod + f : fullscreen
 
 
@@ -112,3 +112,7 @@ workspace : mod + 8          : move 8
 workspace : mod + shift + 8  : swap 8
 workspace : mod + 9          : move 9
 workspace : mod + shift + 9  : swap 9
+
+scratchpad : mod +  minus : create 1
+scratchpad : mod + equal : toggle 1
+scratchpad : mod + alt + shift + 1 : remove 1

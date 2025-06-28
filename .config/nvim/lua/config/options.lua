@@ -1,5 +1,8 @@
 -- My neovim options
 
+-- Fix background colour getting left by neovim in scrollback
+vim.o.hidden = true
+
 -- Set colourscheme to gruvbox dark
 vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
