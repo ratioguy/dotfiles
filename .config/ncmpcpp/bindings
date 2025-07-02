@@ -120,3 +120,6 @@ def_key "b"
 
 def_key "v"
   dummy
+
+def_key "\\"
+  dummy
