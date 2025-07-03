@@ -123,3 +123,6 @@ def_key "v"
 
 def_key "\\"
   dummy
+
+def_key ","
+  dummy

@@ -8,8 +8,6 @@ nm-applet &
 blueman-applet &
 syncthing --no-browser &
 ollama serve & 
-mpd &
-mpDris2
+mpd ; mpc random on  ; mpc load Based\ Music &
+mpDris2 &
 playerctld &
-mpc random on &
-mpc load Based\ Music &

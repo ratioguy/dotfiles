@@ -19,9 +19,9 @@ vim.o.cursorline = true
 vim.o.cursorlineopt = "number"
 
 -- Autocomplete common actions
-vim.cmd('inoremap { {}<Esc>ha')
-vim.cmd('inoremap ( ()<Esc>ha')
-vim.cmd('inoremap [ []<Esc>ha')
+vim.cmd('inoremap { {<Esc>ha')
+vim.cmd('inoremap ( (<Esc>ha')
+vim.cmd('inoremap [ [<Esc>ha')
 vim.cmd('inoremap " ""<Esc>ha')
 vim.cmd("inoremap ' ''<Esc>ha")
 vim.cmd('inoremap ` ``<Esc>ha')
