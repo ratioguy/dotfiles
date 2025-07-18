@@ -26,13 +26,13 @@ mod_key : super
 call : mod + shift + c : reload_config
 
 # Launcher Binds
-bind : mod + d : "rofi -show drun"
+bind : mod + d : "python ~/.local/bin/dmenu_drun"
 bind : mod + shift + d : "rofi -show power-menu -modi power-menu:./.local/bin/rofi-power-menu"
 bind : mod + tab : "rofi -show window"
 
 # App/script binds
 bind : mod + Return : "st"
-bind : mod + b : "flatpak run io.gitlab.librewolf-community"
+bind : mod + b : "flatpak run io.gitlab.librewolf-community --new-window"
 bind : mod + e : "st -e lf"
 bind : mod + m : "st -e ncmpcpp"
 bind : mod + n : "st -e newsboat"
@@ -58,9 +58,9 @@ bind : mod + shift + o : "pactl set-default-sink alsa_output.pci-0000_00_1f.3.an
 
 
 # Music Control
-bind : mod + 0x5c : "sh ~/.local/bin/playerctl-play-pause.sh"
-bind : mod + bracketright : "sh ~/.local/bin/playerctl-next.sh"
-bind : mod + bracketleft : "sh ~/.local/bin/playerctl-play-prev.sh"
+bind : mod + 0x5c : "playerctl play-pause"
+bind : mod + bracketright : "playerctl next"
+bind : mod + bracketleft : "playerctl previous"
 
 
 # Window Management:

@@ -1,5 +1,5 @@
 # Refresh confs
-super + r 
+super + escape 
   pkill -USR1 -x sxhkd
 
 super + shift + c
@@ -84,20 +84,27 @@ super + q
 
 super + {h,j,k,l}
   i3-msg focus {left,down,up,right}   
+
 super + shift + {h,j,k,l} 
   i3-msg move {left,down,up,right} 
+
 super + alt + {h,j,k,l}
   sh ~/.local/bin/i3resize.sh {left,down,up,right} 
+
 super + i
   i3-msg focus floating 
+
 super + shift + i
   i3-msg focus tiling 
+
 super + f
   i3-msg fullscreen 
+
 super + space
   i3-msg floating toggle 
+
 super + c
-  i3-msg floating enable ; i3-msg resize set 1270 720 ; i3-msg move container position center ; sh ~/.local/bin/i3-mouse-warping.sh
+  i3-msg floating enable ; i3-msg resize set 1270 720 ; i3-msg move container position center
 
 super + z
   i3-msg split horizontal
@@ -128,5 +135,5 @@ super + {1-9,0}
 super + shift + {1-9,0}
   i3-msg move container workspace number {1-9,10}
 
-super + Escape
+super + grave
   i3-msg workspace back_and_forth 
