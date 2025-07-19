@@ -38,7 +38,8 @@ bind : mod + m : "st -e ncmpcpp"
 bind : mod + n : "st -e newsboat"
 bind : mod + t : "st -e htop"
 bind : mod + u : "st -c pulsemixer -e pulsemixer"
-#bind : mod + v : "  xfce4-popup-clipman"
+bind : mod + v : "clipmenu -p clipboard"
+bind : mod + shift + v : "clipdel -d ."
 bind : mod + y : "st -c youtube-launcher -e sh ~/.local/bin/youtube-launcher.sh"
 
 # Volume Control 
@@ -77,8 +78,8 @@ call : mod + shift + k : master_next
 call : mod + shift + j : master_previous
 
 # Master Area Resize
-call : mod + alt + l : master_increase
-call : mod + alt + h : master_decrease
+call : mod + l : master_increase
+call : mod + h : master_decrease
 
 # Stack Window Resize
 call : mod + alt + k : stack_increase
