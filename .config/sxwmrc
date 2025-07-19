@@ -14,6 +14,7 @@ motion_throttle         : 60 # Set to screen refresh rate for smoothest motions
 should_float            : "mpv,imv,mupdf,dialog,youtube-launcher,gimp-file-open,pulsemixer,thunar"
 new_win_focus           : true
 warp_cursor             : true
+#start_fullscreen	: "sober"
 #exec                    : ""
 
 # Keybinds:
@@ -27,12 +28,11 @@ call : mod + shift + c : reload_config
 
 # Launcher Binds
 bind : mod + d : "python ~/.local/bin/dmenu_drun"
-bind : mod + shift + d : "rofi -show power-menu -modi power-menu:./.local/bin/rofi-power-menu"
-bind : mod + tab : "rofi -show window"
+bind : mod + shift + d : "bash ~/.local/bin/dmenu-power-menu.sh"
 
 # App/script binds
 bind : mod + Return : "st"
-bind : mod + b : "flatpak run io.gitlab.librewolf-community --new-window"
+bind : mod + b : "firefox"
 bind : mod + e : "st -e lf"
 bind : mod + m : "st -e ncmpcpp"
 bind : mod + n : "st -e newsboat"
@@ -45,11 +45,11 @@ bind : mod + y : "st -c youtube-launcher -e sh ~/.local/bin/youtube-launcher.sh"
 bind : XF86AudioRaiseVolume : "pactl set-sink-volume 0 +5%"
 bind : XF86AudioLowerVolume : "pactl set-sink-volume 0 -5%"
 bind : XF86AudioMuteVolume : "pactl set-sink-mute 0 toggle "
-bind : mod + w : "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-bind : mod + s : "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-bind : mod + shift + s : "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-bind : mod + o : "pactl set-default-sink alsa_output.usb-HP_HP_Speaker_Bar-00.analog-stereo"
-bind : mod + shift + o : "pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo"
+bind : mod + w : "bash ~/.local/bin/volume.sh up"
+bind : mod + s : "bash ~/.local/bin/volume.sh down"
+bind : mod + shift + s : "bash ~/.local/bin/volume.sh mute"
+bind : mod + o : "sh ~/.local/bin/speaker.sh" 
+bind : mod + shift + o : "sh ~/.local/bin/headphone.sh" 
 
 # Screenshot Control
 #bind : mod + p : xfce4-screenshooter 
@@ -65,6 +65,7 @@ bind : mod + bracketleft : "playerctl previous"
 
 # Window Management:
 call : mod + q : close_window
+call : mod + c : centre_window
 call : mod + shift + e : quit
 
 # Focus Movement:
@@ -92,6 +93,12 @@ call : mod + space : toggle_floating
 #call : mod + shift + space : global_floating
 call : mod + f : fullscreen
 
+scratchpad : mod + minus : create 1
+
+scratchpad : mod + equal : toggle 1
+
+scratchpad : mod + alt + 1 : remove 1
+
 
 # Workspaces (1-9)
 workspace : mod + 1          : move 1
@@ -112,7 +119,3 @@ workspace : mod + 8          : move 8
 workspace : mod + shift + 8  : swap 8
 workspace : mod + 9          : move 9
 workspace : mod + shift + 9  : swap 9
-
-scratchpad : mod +  minus : create 1
-scratchpad : mod + equal : toggle 1
-scratchpad : mod + alt + shift + 1 : remove 1
