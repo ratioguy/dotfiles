@@ -12,4 +12,5 @@ playerctld &
 killall pipewire ; pipewire &
 xset r rate 250 50
 dunst &
+blueman-applet &
 exec sxwm

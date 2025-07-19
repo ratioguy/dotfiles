@@ -28,3 +28,4 @@ alias youtube-downloader="yt-dlp -P ~/Downloads/Youtube/ --merge-output-format m
 alias git-uncommited="git status --short"
 alias git-reset="git reset --hard origin/main"
 alias startx="dbus-run-session startx"
+alias !!="fc -s"

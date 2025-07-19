@@ -73,8 +73,8 @@ call : mod + j : focus_next
 call : mod + k : focus_prev
 
 # Master/Stack Movement
-call : mod + shift + j : master_next
-call : mod + shift + k : master_previous
+call : mod + shift + k : master_next
+call : mod + shift + j : master_previous
 
 # Master Area Resize
 call : mod + alt + l : master_increase
@@ -94,10 +94,8 @@ call : mod + space : toggle_floating
 call : mod + f : fullscreen
 
 scratchpad : mod + minus : create 1
-
 scratchpad : mod + equal : toggle 1
-
-scratchpad : mod + alt + 1 : remove 1
+scratchpad : mod + shift + minus : remove 1
 
 
 # Workspaces (1-9)
