@@ -10,7 +10,7 @@ super + Return
  st
 
 super + b
-  flatpak run io.gitlab.librewolf-community
+  firefox
 
 super + e
   st -e lf
