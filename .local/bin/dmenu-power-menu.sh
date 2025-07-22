@@ -8,7 +8,9 @@ elif [[ "${result}" = "Reboot" ]]; then
 elif [[ "${result}" = "Suspend" ]]; then
   loginctl suspend
 elif [[ "${result}" = "Lock" ]]; then
-  loginctl lock-session ${XDG_SESSION_ID-}
+  #loginctl lock-session ${XDG_SESSION_ID-}
+  slock
 elif [[ "${result}" = "Logout" ]]; then
-  loginctl terminate-session ${XDG_SESSION_ID-}
+  #loginctl terminate-session ${XDG_SESSION_ID-}
+  killall sxwm
 fi

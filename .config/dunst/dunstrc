@@ -8,18 +8,18 @@ highlight = "#d79920"
 close = mod4+r
 
 [urgency_low]
-    background = "#282828"
+    background = "#393634"
     foreground = "#ebdbb2"
     timeout = 10
 
 [urgency_normal]
-    background = "#282828"
+    background = "#393634"
     foreground = "#ebdbb2"
     timeout = 10
     override_pause_level = 30
 
 [urgency_critical]
-    background = "#282828"
+    background = "#393634"
     foreground = "#ebdbb2"
     frame_color = "#ff0000"
     timeout = 10

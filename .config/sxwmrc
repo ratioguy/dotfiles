@@ -6,20 +6,18 @@ swap_border_colour       : #ffffff
 # General Options:
 gaps                    : 5
 border_width            : 3
-master_width            : 50 # Percentage of screen width
+master_width            : 50 
 resize_master_amount    : 5
 resize_stack_amt        : 5
 #snap_distance          : 0
-motion_throttle         : 60 # Set to screen refresh rate for smoothest motions
-should_float            : "mpv,imv,mupdf,dialog,youtube-launcher,gimp-file-open,pulsemixer,thunar"
+motion_throttle         : 60 
+should_float            : "imv,mupdf,dialog,youtube-launcher,gimp-file-open,pulsemixer,pcmanfm"
 new_win_focus           : true
 warp_cursor             : true
 #start_fullscreen	: "sober"
 #exec                    : ""
 
 # Keybinds:
-# Commands must be surrounded with ""
-# Function calls don't need this
 
 mod_key : super
 
@@ -38,25 +36,24 @@ bind : mod + m : "st -e ncmpcpp"
 bind : mod + n : "st -e newsboat"
 bind : mod + t : "st -e htop"
 bind : mod + u : "st -c pulsemixer -e pulsemixer"
-bind : mod + v : "clipmenu -p clipboard"
+bind : mod + v : "clipmenu -p clipboard -i"
 bind : mod + shift + v : "clipdel -d ."
 bind : mod + y : "st -c youtube-launcher -e sh ~/.local/bin/youtube-launcher.sh"
 
 # Volume Control 
-bind : XF86AudioRaiseVolume : "pactl set-sink-volume 0 +5%"
-bind : XF86AudioLowerVolume : "pactl set-sink-volume 0 -5%"
-bind : XF86AudioMuteVolume : "pactl set-sink-mute 0 toggle "
+bind : XF86AudioRaiseVolume : "bash ~/.local/bin/volume.sh up"
+bind : XF86AudioLowerVolume : "bash ~/.local/bin/volume.sh down"
+bind : XF86AudioMuteVolume : "bash ~/.local/bin/volume.sh down mute"
 bind : mod + w : "bash ~/.local/bin/volume.sh up"
 bind : mod + s : "bash ~/.local/bin/volume.sh down"
 bind : mod + shift + s : "bash ~/.local/bin/volume.sh mute"
-bind : mod + o : "sh ~/.local/bin/speaker.sh" 
-bind : mod + shift + o : "sh ~/.local/bin/headphone.sh" 
+bind : mod + o : "sh -c 'pactl set-default-sink alsa_output.usb-HP_HP_Speaker_Bar-00.analog-stereo ; notify-send -t 8000 Output: Speaker'" 
+bind : mod + shift + o : "sh -c 'pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo ; notify-send -t 8000 Output: Headphones'" 
 
 # Screenshot Control
-#bind : mod + p : xfce4-screenshooter 
-# bind : PRINT (change this to code) : xfce4-screenshooter
-# bind : mod + shift + p : xfce4-screenshooter -f -s ~/Pictures/Screenshots
-
+bind : mod + p : "sh -c 'scrot --select --line mode=edge --freeze ~/Pictures/Screenshots/Screenshot-%Y-%m-%d.png ; notify-send -t 2000 "Screenshot Taken."'"
+bind : mod + alt + p : "sh -c 'scrot --focussed --freeze ~/Pictures/Screenshots/Screenshot-%Y-%m-%d.png ; notify-send -t 2000 "Screenshot Taken."'"
+bind : mod + shift +  p : "sh -c 'scrot --freeze ~/Pictures/Screenshots/Screenshot-%Y-%m-%d.png ; notify-send -t 2000 "Screenshot Taken"'" 
 
 # Music Control
 bind : mod + 0x5c : "playerctl play-pause"
@@ -75,11 +72,11 @@ call : mod + k : focus_prev
 
 # Master/Stack Movement
 call : mod + shift + k : master_next
-call : mod + shift + j : master_previous
+call : mod + shift + j : master_prev
 
 # Master Area Resize
-call : mod + l : master_increase
-call : mod + h : master_decrease
+call : mod + alt + l : master_increase
+call : mod + alt + h : master_decrease
 
 # Stack Window Resize
 call : mod + alt + k : stack_increase
@@ -96,7 +93,7 @@ call : mod + f : fullscreen
 
 scratchpad : mod + minus : create 1
 scratchpad : mod + equal : toggle 1
-scratchpad : mod + shift + minus : remove 1
+scratchpad : mod + shift + equal : remove 1
 
 
 # Workspaces (1-9)

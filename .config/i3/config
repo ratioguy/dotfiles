@@ -1,6 +1,5 @@
 # Startup applications
 exec --no-startup-id sh ~/.local/bin/startup.sh
-#exec --no-startup-id sh ~/.local/bin/monitor.sh
 
 # Set font 
 font pango:LiterationMono Nerd Font 10
