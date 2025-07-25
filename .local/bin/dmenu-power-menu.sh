@@ -12,5 +12,5 @@ elif [[ "${result}" = "Lock" ]]; then
   slock
 elif [[ "${result}" = "Logout" ]]; then
   #loginctl terminate-session ${XDG_SESSION_ID-}
-  killall sxwm
+  killall dwm
 fi
