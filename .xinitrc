@@ -1,7 +1,7 @@
 #!/bin/sh
 picom &
 sh ~/.local/bin/monitor.sh
-#*sxbar &
+#sxbar &
 redshift -O 5500
 xwallpaper --zoom ~/Pictures/wallpapers/White-Mountain.jpg
 syncthing --no-browser &
@@ -15,4 +15,5 @@ dunst &
 blueman-applet &
 clipmenud &
 ~/.local/bin/bar.sh &
+syndaemon -i 0.40 -K -R -d &
 exec dwm
