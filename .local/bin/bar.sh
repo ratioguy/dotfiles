@@ -1,7 +1,7 @@
 #/bin/sh
 
 status () { 
-	echo -n " $(cat /sys/class/power_supply/BAT0/capacity ; cat /sys/class/power_supply/BAT1/capacity ) | $(date '+%B %d, %Y %I:%M %p')"
+	echo -n " $(acpi | awk '{print $4}' | sed s/,//) | $(date '+%B %d, %Y %I:%M %p')"
 }
 
 while :; do
