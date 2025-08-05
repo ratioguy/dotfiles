@@ -12,8 +12,14 @@ export MANPAGER='nvim +Man!'
 # Source aliases from aliasrc
 source ~/.config/aliasrc
 
-# Make ctrl + L work
-bind '^L'=clear-screen
+# Bind ctrl + L to clear screen
+bind ^L=clear-screen
+
+# Bind history/text navigation
+bind ^[j=down-history
+bind ^[k=up-history
+bind ^[l=forward-char
+bind ^[h=backward-char
 
 # Make lf cd on exit
 lf () {
