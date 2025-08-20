@@ -17,6 +17,7 @@ vim.call('plug#begin')
 
 Plug('ellisonleao/gruvbox.nvim')
 Plug('nvim-treesitter/nvim-treesitter')
+Plug('https://github.com/neovim/nvim-lspconfig')
 Plug('lukas-reineke/indent-blankline.nvim')
 Plug('lewis6991/gitsigns.nvim')
 Plug('MeanderingProgrammer/render-markdown.nvim')
