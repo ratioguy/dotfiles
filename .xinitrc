@@ -15,5 +15,4 @@ dunst &
 blueman-applet &
 clipmenud &
 ~/.local/bin/bar.sh &
-syndaemon -i 0.40 -K -R -d &
 exec dwm

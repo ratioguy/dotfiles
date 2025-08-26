@@ -2,15 +2,15 @@
 result=$(echo -e "Shutdown\nReboot\nSuspend\nLock\nLogout" | dmenu -i -l 5 -p power)
 
 if [[ "${result}" = "Shutdown" ]]; then
-  loginctl poweroff
+  systemctl poweroff
 elif [[ "${result}" = "Reboot" ]]; then
-  loginctl reboot
+  systemctl reboot
 elif [[ "${result}" = "Suspend" ]]; then
-  loginctl suspend
+  systemctl suspend
 elif [[ "${result}" = "Lock" ]]; then
-  #loginctl lock-session ${XDG_SESSION_ID-}
+  #systemctl lock-session ${XDG_SESSION_ID-}
   slock
 elif [[ "${result}" = "Logout" ]]; then
-  #loginctl terminate-session ${XDG_SESSION_ID-}
+  #systemctl terminate-session ${XDG_SESSION_ID-}
   killall dwm
 fi
