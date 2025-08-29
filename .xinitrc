@@ -15,4 +15,6 @@ dunst &
 blueman-applet &
 clipmenud &
 ~/.local/bin/bar.sh &
+/usr/lib/xdg-desktop-portal-gtk &
+/usr/lib/xdg-desktop-portal --replace & 
 exec dwm

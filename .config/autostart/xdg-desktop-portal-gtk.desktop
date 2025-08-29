@@ -1,4 +1,0 @@
-[Desktop Entry]
-Hidden=true
-Name=desktop-portal-gtk
-Exec=/usr/lib/xdg-desktop-portal-gtk ; /usr/lib/xdg-desktop-portal --replace
