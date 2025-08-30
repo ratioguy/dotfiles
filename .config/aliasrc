@@ -1,5 +1,6 @@
 # My alias
 
+alias q="exit"
 alias sudo="doas"
 alias sudoedit='doas nvim --clean'
 alias vi="nvim"
