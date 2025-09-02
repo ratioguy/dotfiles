@@ -12,3 +12,6 @@ map("n", "<C-n>", "<cmd>NERDTreeToggle<CR>", { desc = "Toggle nerdtree window" }
 
 -- Map nohlsearch
 map("n", "?", "<cmd>nohlsearch<CR>", { desc = "execute nohlsearch" })
+
+-- Map Fzf
+map("n", "<S-f>", "<cmd>FZF<CR>", { desc = "execute fzf" })

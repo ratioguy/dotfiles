@@ -26,5 +26,8 @@ lf () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
+# Set enviornment Varibles
+export FZF_DEFAULT_COMMAND="fd . --hidden"
+
 # Make zoxide load
 eval "$(zoxide init posix --hook prompt)"
