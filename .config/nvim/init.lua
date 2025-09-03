@@ -27,8 +27,8 @@ Plug('junegunn/fzf.vim')
 vim.call('plug#end')
 
 -- Require plugin configs
-require("config.mappings")
-require("config.options")
-require("plugins.treesitter")
-require("plugins.indent-blankline")
-require("plugins.gitsigns")
+require('config.mappings')
+require('config.options')
+require('plugins.treesitter')
+require('plugins.indent-blankline')
+require('plugins.gitsigns')
