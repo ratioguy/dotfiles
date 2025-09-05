@@ -1,4 +1,5 @@
 #!/bin/sh
-echo "Enter the Youtube Link:"
+
+echo "Enter the Link:"
 read link
 setsid -f mpv $link
