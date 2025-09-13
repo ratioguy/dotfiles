@@ -15,6 +15,6 @@ blueman-applet &
 clipmenud &
 ~/.local/bin/bar.sh &
 export XDG_CURRENT_DESKTOP=dwm
-/usr/lib/xdg-desktop-portal --replace & 
 /usr/lib/xdg-desktop-portal-gtk &
+/usr/lib/xdg-desktop-portal --replace & 
 exec dwm
