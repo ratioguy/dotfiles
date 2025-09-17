@@ -47,6 +47,9 @@ cmd on-cd &{{
     zoxide add "$PWD"
 }}
 
+# Set options
+set relativenumber 
+
 # Bindings
 map t
 map w
@@ -54,7 +57,6 @@ map d
 map m
 map u
 map c :clear ; unselect
-map v :toggle; down
 map V invert
 map . set hidden!
 map x cut

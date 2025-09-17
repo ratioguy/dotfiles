@@ -28,6 +28,7 @@ lf () {
 
 # Set enviornment Varibles
 export FZF_DEFAULT_COMMAND="fd . ~ --hidden"
+export EDITOR=nvim
 
 # Make zoxide load
 eval "$(zoxide init posix --hook prompt)"
