@@ -14,6 +14,7 @@ dunst &
 blueman-applet &
 clipmenud &
 ~/.local/bin/bar.sh &
+syndaemon -i 0.5 &
 export XDG_CURRENT_DESKTOP=dwm
 /usr/lib/xdg-desktop-portal-gtk &
 /usr/lib/xdg-desktop-portal --replace & 
