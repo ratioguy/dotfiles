@@ -47,6 +47,9 @@ cmd on-cd &{{
     zoxide add "$PWD"
 }}
 
+# Set config options
+set relativenumber true
+
 # Bindings
 map t
 map w
