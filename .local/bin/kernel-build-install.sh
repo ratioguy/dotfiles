@@ -24,11 +24,14 @@ make bzimage
 # Copies the kernel into the /boot directory.
 cp -v arch/x86/boot/bzImage /boot/vmlinuz-linux-based
 
+# Create initramfs image.
 mkinitcpio -k linux-based -g /boot/initramfs-linux-based.img
 
-cp System.map /boot/System.map-linux-based
+# Copy the System.map file.
+cp /boot/System.map /boot/System.map-linux-based
 ln -sf /boot/System.map-linux-based /boot/System.map
 
+# Make the grub config
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # End of compile message.

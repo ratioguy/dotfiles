@@ -1,13 +1,10 @@
 # My alias
 
-alias q="exit"
 alias sudo="doas"
 alias sudoedit='doas nvim --clean'
 alias vi="nvim"
 alias vim="nvim"
 alias ll="ls -lah"
-alias cd="z"
-alias ..="z .."
 alias ls="ls --color"
 alias bg="xwallpaper --zoom ~/Pictures/wallpapers/White-Mountain.jpg"
 alias yt-launcher="sh ~/.local/bin/youtube-launcher.sh ; exit"
