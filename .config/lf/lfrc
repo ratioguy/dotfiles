@@ -14,7 +14,7 @@ cmd mkfile ${{
   nvim $ans
 }}
 
-# Phone command
+# Mount Phone command
 cmd phone-mount ${{
   gio mount -li | awk -F= '{if(index($2,"mtp") == 1)system("gio mount "$2)}'
 }}
@@ -32,41 +32,43 @@ cmd unarchive ${{
   esac
 }}
 
-# Zoxide commands/bindings
-cmd z %{{
-    result="$(zoxide query --exclude "$PWD" "$@" | sed 's/\\/\\\\/g;s/"/\\"/g')"
-    lf -remote "send $id cd \"$result\""
-}}
-
-cmd zi ${{
-    result="$(zoxide query -i | sed 's/\\/\\\\/g;s/"/\\"/g')"
-    lf -remote "send $id cd \"$result\""
-}}
-
-cmd on-cd &{{
-    zoxide add "$PWD"
+cmd unarchive ${{
+  unp $f 
 }}
 
 # Set config options
 set relativenumber true
 
 # Bindings
+	
+# Unmap bindings
+map <f-1>
 map t
 map w
 map d
 map m
 map u
+
+# Navigation shortcuts
+map <esc> :quit
+map <enter> open
+map <backspace2> updir
+map . set hidden!
+
+# Selection shortcuts
 map c :clear ; unselect
 map v :toggle; down
 map V invert
-map . set hidden!
-map x cut
-map <f-2> rename
-map zi zi
+
+# File management shortcuts
 map d delete
+map x cut
 map md mkdir
 map mf mkfile
-map e $nvim "$fx"
+map au unarchive
+map <f-2> rename
+
+# Directory shortcuts
 map sd cd /run/media/
 map sp cd /run/user/1000/gvfs
 map gd cd ~/Downloads
@@ -77,8 +79,3 @@ map gm cd ~/Music/
 map gl  cd ~/.local/
 map gb cd ~/.local/bin/
 map gy cd ~/Downloads/Youtube/
-map au unarchive
-map <esc> :quit
-map <enter> open
-map <backspace2> updir
-map <f-1>

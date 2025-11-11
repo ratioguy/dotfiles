@@ -31,7 +31,7 @@ mkinitcpio -k linux-based -g /boot/initramfs-linux-based.img
 cp /boot/System.map /boot/System.map-linux-based
 ln -sf /boot/System.map-linux-based /boot/System.map
 
-# Make the grub config
+# Make the grub config.
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # End of compile message.
