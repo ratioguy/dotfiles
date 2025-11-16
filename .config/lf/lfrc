@@ -19,19 +19,7 @@ cmd phone-mount ${{
   gio mount -li | awk -F= '{if(index($2,"mtp") == 1)system("gio mount "$2)}'
 }}
 
-# Archive bindings
-cmd unarchive ${{
-  case "$f" in
-      *.zip) unzip "$f" ;;
-      *.rar) unrar x "$f" ;;
-      *.tar.gz) tar -xzvf "$f" ;;
-      *.tar.bz2) tar -xjvf "$f" ;;
-      *.tar) tar -xvf "$f" ;;
-      *.7z) 7z e "$f" ;;
-      *) echo "Unsupported format" ;;
-  esac
-}}
-
+# Archive binding
 cmd unarchive ${{
   unp $f 
 }}
