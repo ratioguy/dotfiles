@@ -1,18 +1,33 @@
 # My alias
 
+# Doas aliases
 alias sudo="doas"
 alias sudoedit='doas nvim --clean'
+
+# Neovim aliases
 alias vi="nvim"
 alias vim="nvim"
 alias ll="ls -lah"
 alias ls="ls --color"
+
+# Background alias
 alias bg="xwallpaper --zoom ~/Pictures/wallpapers/White-Mountain.jpg"
+
+# Yt aliases
 alias yt-launcher="sh ~/.local/bin/youtube-launcher.sh ; exit"
 alias yt-downloader="yt-dlp -P ~/Downloads/Youtube/ --merge-output-format mp4 -f 'bestvideo[height<=?720]+bestaudio/best' --sponsorblock-remove sponsor,intro,outro,interaction,selfpromo,preview --exec 'setsid -f mpv --no-terminal $link'"
 alias music-downloader="sh ~/.local/bin/music-downloader.sh"
+
+# Playlist gen alias
 alias playlist-gen="sh ~/.local/bin/playlist-gen.sh"
+
+# Bc alias
 alias bc="bc -l -q"
-#alias git-uncommited="git status --short"
+# alias git-uncommited="git status --short"
 # alias git-reset="git reset --hard origin/main"
+
+# Startx as dbus-session
 alias startx="dbus-run-session startx"
+
+# rerun last command
 alias !!="fc -s"
