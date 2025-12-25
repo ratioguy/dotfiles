@@ -2,7 +2,7 @@
 
 # Run this script as the superuser.
 
-# This script is meant for Arch Linux, please modify to your systems needs, also this script is POSIX complient so no need for bash.
+# This script is intended for Arch Linux, please modify to your systems needs, also this script is POSIX complient so no need for bash.
 
 # To see how fast the kernel compiles run this script with the prefix time.
 

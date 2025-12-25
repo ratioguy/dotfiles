@@ -4,11 +4,9 @@ picom &
 sh ~/.local/bin/monitor.sh
 redshift -O 5500
 xwallpaper --zoom ~/Pictures/wallpapers/White-Mountain.jpg
-syncthing --no-browser &
-mpd ; mpc random on  ; mpc load Based\ Music &
+syncthing --no-browser --no-console &
 mpd-mpris &
 playerctld &
-killall pipewire ; pipewire &
 xset r rate 250 50
 dunst &
 blueman-applet &
@@ -16,6 +14,4 @@ clipmenud &
 ~/.local/bin/bar.sh &
 syndaemon -i 0.5 &
 export XDG_CURRENT_DESKTOP=dwm
-/usr/lib/xdg-desktop-portal-gtk &
-/usr/lib/xdg-desktop-portal --replace & 
 exec dwm
