@@ -23,8 +23,6 @@ alias playlist-gen="sh ~/.local/bin/playlist-gen.sh"
 
 # Bc alias
 alias bc="bc -l -q"
-# alias git-uncommited="git status --short"
-# alias git-reset="git reset --hard origin/main"
 
 # Startx as dbus-session
 alias startx="dbus-run-session startx"
