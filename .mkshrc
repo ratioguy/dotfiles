@@ -29,3 +29,4 @@ lf () {
 # Set enviornment Varibles
 export FZF_DEFAULT_COMMAND="fd . ~ --hidden"
 export EDITOR=nvim
+export PATH=~/.local/bin:$PATH

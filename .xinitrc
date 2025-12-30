@@ -4,7 +4,7 @@ picom &
 sh ~/.local/bin/monitor.sh
 redshift -O 5500
 xwallpaper --zoom ~/Pictures/wallpapers/White-Mountain.jpg
-syncthing --no-browser --no-console &
+syncthing --no-browser >> /dev/null &
 mpd-mpris &
 playerctld &
 xset r rate 250 50
