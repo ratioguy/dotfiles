@@ -1,0 +1,8 @@
+# Get rid of screen tearing
+
+backend = "glx"
+glx-no-stencil = true
+glx-copy-from-front = false
+dri3 = false
+vsync = true
+dithered-present = false;

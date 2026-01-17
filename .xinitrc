@@ -1,5 +1,6 @@
 #!/bin/sh
 
+picom &
 sh ~/.local/bin/monitor.sh
 redshift -O 5500
 xwallpaper --zoom ~/Pictures/wallpapers/White-Mountain.jpg
