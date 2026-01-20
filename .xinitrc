@@ -12,5 +12,4 @@ dunst &
 clipmenud &
 ~/.local/bin/bar.sh &
 syndaemon -i 0.5 &
-export XDG_CURRENT_DESKTOP=dwm
 exec dwm
