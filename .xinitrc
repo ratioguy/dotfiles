@@ -11,5 +11,4 @@ xset r rate 250 50
 dunst &
 clipmenud &
 ~/.local/bin/bar.sh &
-syndaemon -i 0.5 &
 exec dwm

@@ -1,8 +1,7 @@
 # My aliases
 
 # Doas aliases
-alias sudo="doas"
-alias sudoedit='doas nvim --clean'
+alias doasedit='doas nvim --clean'
 
 # Neovim aliases
 alias vim="nvim"
