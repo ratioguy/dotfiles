@@ -7,7 +7,6 @@ xwallpaper --zoom ~/Pictures/wallpapers/White-Mountain.jpg
 syncthing --no-browser >> /dev/null &
 mpd-mpris &
 playerctld &
-xset r rate 250 50
 dunst &
 clipmenud &
 ~/.local/bin/bar.sh &
