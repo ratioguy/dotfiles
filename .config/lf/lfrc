@@ -2,16 +2,16 @@
 
 # Create directories command
 cmd mkdir ${{
-  printf "Directory Name: " read ans
-  read ans
-  mkdir $ans
+  echo "Directory Name: "
+  read dirname
+  mkdir $dirname
 }}
 
 # Create file command
 cmd mkfile ${{
-  printf "File Name: "
-  read ans
-  nvim $ans
+  echo "File Name: "
+  read file-name
+  nvim $filename
 }}
 
 # Mount Phone command

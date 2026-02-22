@@ -1,5 +1,5 @@
 # Bindings
-bind m exec mpv "%l"
+bind m exec setsid -f mpv --no-terminal "%l"
 bind b exec firefox "%l"
 bind f exec yt-dlp "%l" -P ~/Downloads/Youtube/ --merge-output-format mp4 -f 'bestvideo[height<=?1080]+bestaudio/best' --sponsorblock-remove sponsor,intro,outro,interaction,selfpromo,preview --exec 'setsid -f mpv --no-terminal'
 bind F exec yt-dlp "%l" -P ~/Downloads/Youtube/ --merge-output-format mp4 -f 'bestvideo[height<=?720]+bestaudio/best' --sponsorblock-remove sponsor,intro,outro,interaction,selfpromo,preview --exec 'setsid -f mpv --no-terminal'
