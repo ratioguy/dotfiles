@@ -9,5 +9,5 @@ mpd-mpris &
 playerctld &
 dunst &
 clipmenud &
-~/.local/bin/bar.sh &
+slstatus &
 exec dwm

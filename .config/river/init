@@ -1,0 +1,76 @@
+#!/bin/sh
+
+# Define aliases
+rc=riverctl
+rt=rivertile
+
+
+# Autoload
+$rc spawn 'sh ~/.local/bin/monitor-wl.sh'
+$rc spawn 'synchting --no-browser >> /dev/null'
+$rc spawn 'gammastep -O 5500'
+$rc spawn 'mpd-mpris'
+$rc spawn 'playerctld'
+$rc spawn 'mako'
+$rc spawn 'swaybg -m fill -i ~/Pictures/wallpapers/White-Mountain.jpg'
+$rc spawn 'slstatus -s | dam'
+
+# General Config
+$rc set-cursor-warp on-focus-change
+$rc focus-follows-cursor always
+$rc border-width 2
+
+# Tiling Layout
+$rc default-layout rivertile
+$rt -view-padding 2 -outer-padding 2 &
+$rt -view-padding 2 -outer-padding 2 &
+
+# Keyboard Config
+$rc keyboard-layout -options "caps:escape" us
+$rc set-repeat 50 250
+
+# Bindings
+
+# WM Bindings
+$rc map normal Super+Shift Q exit
+$rc map normal Super+Shift C close
+$rc map normal Super J focus-view next
+$rc map normal Super K focus-view previous
+$rc map normal Super Return zoom 
+
+# Tags
+for i in $(seq 1 9)
+do
+    tags=$((1 << ($i - 1)))
+    # Super+[1-9] focus tags
+    $rc map normal Super $i set-focused-tags $tags
+
+    # Super+Shift+[1-9] move window to desired tags
+    $rc map normal Super+Shift $i set-view-tags $tags
+
+    # Super+Control+[1-9] toggle focus of a tag
+    $rc map normal Super+Control $i toggle-focused-tags $tags
+
+    # Super+Shift+Control+[1-9] focus window on specific tag
+    $rc map normal Super+Shift+Control $i toggle-view-tags $tags
+done
+
+all_tags=$(((1 << 32) - 1))
+# Focus all tags
+$rc map normal Super 0 set-focused-tags $all_tags
+
+# Move window to all tags
+$rc map normal Super+Shift 0 set-view-tags $all_tags
+
+# Focus last used tag
+$rc map normal Super tab focus-previous-tags
+
+# Personal Bindings
+$rc map normal Super+Shift Return spawn foot
+$rc map normal Super p spawn mew-run
+$rc map normal Super+Shift b spawn firefox
+$rc map normal Super e spawn 'foot -e lf'
+$rc map normal Super+Shift m  spawn 'foot -e ncmpcpp'
+$rc map normal Super n spawn 'foot -e newsraft'
+$rc map normal Super u spawn 'foot -T pulsemixer -e pulsemixer'
+

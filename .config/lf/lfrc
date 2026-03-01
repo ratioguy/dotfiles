@@ -10,7 +10,7 @@ cmd mkdir ${{
 # Create file command
 cmd mkfile ${{
   echo "File Name: "
-  read file-name
+  read filename
   nvim $filename
 }}
 
