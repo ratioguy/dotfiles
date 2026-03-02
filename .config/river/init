@@ -4,16 +4,43 @@
 rc=riverctl
 rt=rivertile
 
+$rc map-switch normal lid open spawn 'sh ~/.local/bin/monitor-wl.sh'
+$rc map-switch normal lid close spawn 'sh ~/.local/bin/monitor-wl.sh'
+
+#tst
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
+systemctl --user restart xdg-desktop-portal
 
 # Autoload
-$rc spawn 'sh ~/.local/bin/monitor-wl.sh'
+# $rc spawn 'sh ~/.local/bin/monitor-wl.sh'
 $rc spawn 'synchting --no-browser >> /dev/null'
-$rc spawn 'gammastep -O 5500'
+$rc spawn 'sh ~/.local/bin/monitor-wl.sh'
 $rc spawn 'mpd-mpris'
 $rc spawn 'playerctld'
-$rc spawn 'mako'
+$rc spawn 'dunst'
 $rc spawn 'swaybg -m fill -i ~/Pictures/wallpapers/White-Mountain.jpg'
 $rc spawn 'slstatus -s | dam'
+
+# Floated Windows 
+riverctl rule-add -app-id 'foot*' -title 'pulsemixer' float
+riverctl rule-add -app-id 'foot*' -title 'youtube-launcher' float
+riverctl rule-add -app-id 'foot*' -title 'youtube-downloader' float
+riverctl rule-add -app-id 'thunar*' float
+riverctl rule-add -app-id 'imv*' float
+riverctl rule-add -app-id 'MuPDF*' float
+riverctl rule-add -app-id 'gimp-file-open*' float
+riverctl rule-add -app-id 'dialog*' float
+
+# General Config
+riverctl rule-add -app-id 'thunar*' float
+
+# General Config
+riverctl rule-add -app-id 'foot*' -title 'pulsemixer' float
+riverctl rule-add -app-id 'thunar*' float
+
+# General Config
+riverctl rule-add -app-id 'thunar*' float
 
 # General Config
 $rc set-cursor-warp on-focus-change
@@ -67,10 +94,25 @@ $rc map normal Super tab focus-previous-tags
 
 # Personal Bindings
 $rc map normal Super+Shift Return spawn foot
-$rc map normal Super p spawn mew-run
+$rc map normal Super p spawn 'mew-run -i'
 $rc map normal Super+Shift b spawn firefox
 $rc map normal Super e spawn 'foot -e lf'
 $rc map normal Super+Shift m  spawn 'foot -e ncmpcpp'
 $rc map normal Super n spawn 'foot -e newsraft'
+$rc map normal Super+Shift t spawn 'foot -e htop'
 $rc map normal Super u spawn 'foot -T pulsemixer -e pulsemixer'
+$rc map normal Super u spawn 'foot -T pulsemixer -e pulsemixer'
+$rc map normal Super y spawn 'foot -T youtube-launcher -e ~/.local/bin/yt-launcher.sh'
+$rc map normal Super+Shift y spawn 'foot -T youtube-downloader -e ~/.local/bin/yt-downloader.sh'
+
+
+$rc map normal Super w spawn 'bash ~/.local/bin/volume.sh up'
+$rc map normal Super s spawn 'bash ~/.local/bin/volume.sh down'
+$rc map normal Super+Shift s spawn 'bash ~/.local/bin/volume.sh mute'
+$rc map normal None XF86AudioRaiseVolume  spawn "bash ~/.local/bin/volume.sh up" 
+$rc map normal None XF86AudioLowerVolume  spawn "bash ~/.local/bin/volume.sh down" 
+$rc map normal None XF86AudioMute         spawn "bash ~/.local/bin/volume.sh mute"
+$rc map normal Super o spawn "pactl set-default-sink alsa_output.usb-HP_HP_Speaker_Bar-00.analog-stereo ; notify-send -t 8000 Output: Speaker"
+$rc map normal Super+Shift o  spawn "pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo ; notify-send -t 8000 Output: Headphones"
+$rc map normal Super b spawn 'pgrep dam && killall dam || slstatus -s | dam'
 
