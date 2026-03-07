@@ -2,7 +2,8 @@
 
 # Define aliases
 rc=riverctl
-rt=rivertile
+rt=riverdeck
+mod=Super
 
 $rc map-switch normal lid open spawn 'sh ~/.local/bin/monitor-wl.sh'
 $rc map-switch normal lid close spawn 'sh ~/.local/bin/monitor-wl.sh'
@@ -37,8 +38,8 @@ $rc rule-add -app-id 'dialog*' float
 $rc set-cursor-warp on-focus-change
 $rc focus-follows-cursor always
 
-$rc map-pointer normal Super BTN_LEFT move-view
-$rc map-pointer normal Super BTN_RIGHT resize-view
+$rc map-pointer normal $mod BTN_LEFT move-view
+$rc map-pointer normal $mod BTN_RIGHT resize-view
 
 # Border 
 $rc border-width 2
@@ -46,9 +47,9 @@ $rc border-color-focused 0xd79920ff
 $rc border-color-unfocused 0xd79920AA
 
 # Tiling Layout
-$rc default-layout rivertile
-$rt -view-padding 2 -outer-padding 2 &
-$rt -view-padding 2 -outer-padding 2 &
+$rc default-layout riverdeck
+riverdeck -outer-gaps 0 -per-tag &
+
 
 # Keyboard Config
 $rc keyboard-layout -options "caps:escape" us
@@ -57,86 +58,86 @@ $rc set-repeat 50 250
 # Bindings
 
 # WM Bindings
-$rc map normal Super+Shift Q exit
-$rc map normal Super+Shift C close
-$rc map normal Super J focus-view next
-$rc map normal Super K focus-view previous
-$rc map normal Super+Shift J swap next
-$rc map normal Super+Shift K swap previous
-$rc map normal Super Return zoom 
+$rc map normal $mod+Shift Q exit
+$rc map normal $mod+Shift C close
+$rc map normal $mod J focus-view next
+$rc map normal $mod K focus-view previous
+$rc map normal $mod+Shift J swap next
+$rc map normal $mod+Shift K swap previous
+$rc map normal $mod Return zoom 
 
 # Master resize
-$rc map normal Super H send-layout-cmd $rt "main-ratio -0.05"
-$rc map normal Super L send-layout-cmd $rt "main-ratio +0.05"
+$rc map normal $mod H send-layout-cmd $rt "main-ratio -0.05"
+$rc map normal $mod L send-layout-cmd $rt "main-ratio +0.05"
 
 
 # Floating window controls
-$rc map normal Super Space toggle-float
+$rc map normal $mod Space toggle-float
 
 # Resize move floating
-$rc map normal Super+Alt H move left 50
-$rc map normal Super+Alt J move down 50
-$rc map normal Super+Alt K move up 50
-$rc map normal Super+Alt L move right 50
+$rc map normal $mod+Alt H move left 50
+$rc map normal $mod+Alt J move down 50
+$rc map normal $mod+Alt K move up 50
+$rc map normal $mod+Alt L move right 50
 
 # Resize move floating
-$rc map normal Super+Control H resize horizontal -50
-$rc map normal Super+Control J resize vertical 50
-$rc map normal Super+Control K resize vertical -50
-$rc map normal Super+Control L resize horizontal 50
+$rc map normal $mod+Control H resize horizontal -50
+$rc map normal $mod+Control J resize vertical 50
+$rc map normal $mod+Control K resize vertical -50
+$rc map normal $mod+Control L resize horizontal 50
 
 
 # Fullscreen
-$rc map normal Super+Shift F toggle-fullscreen
+$rc map normal $mod+Shift F toggle-fullscreen
 
 
 # Tags
 for i in $(seq 1 9)
 do
     tags=$((1 << ($i - 1)))
-    # Super+[1-9] focus tags
-    $rc map normal Super $i set-focused-tags $tags
+    # $mod+[1-9] focus tags
+    $rc map normal $mod $i set-focused-tags $tags
 
-    # Super+Shift+[1-9] move window to desired tags
-    $rc map normal Super+Shift $i set-view-tags $tags
+    # $mod+Shift+[1-9] move window to desired tags
+    $rc map normal $mod+Shift $i set-view-tags $tags
 
-    # Super+Control+[1-9] toggle focus of a tag
-    $rc map normal Super+Control $i toggle-focused-tags $tags
+    # $mod+Control+[1-9] toggle focus of a tag
+    $rc map normal $mod+Control $i toggle-focused-tags $tags
 
-    # Super+Shift+Control+[1-9] focus window on specific tag
-    $rc map normal Super+Shift+Control $i toggle-view-tags $tags
+    # $mod+Shift+Control+[1-9] focus window on specific tag
+    $rc map normal $mod+Shift+Control $i toggle-view-tags $tags
 done
 
 all_tags=$(((1 << 32) - 1))
 # Focus all tags
-$rc map normal Super 0 set-focused-tags $all_tags
+$rc map normal $mod 0 set-focused-tags $all_tags
 
 # Move window to all tags
-$rc map normal Super+Shift 0 set-view-tags $all_tags
+$rc map normal $mod+Shift 0 set-view-tags $all_tags
 
 # Focus last used tag
-$rc map normal Super tab focus-previous-tags
+$rc map normal $mod tab focus-previous-tags
 
 # Personal Bindings
-$rc map normal Super+Shift Return spawn foot
-$rc map normal Super p spawn 'mew-run -i'
-$rc map normal Super+Shift b spawn firefox
-$rc map normal Super e spawn 'foot -e lf'
-$rc map normal Super+Shift m  spawn 'foot -e ncmpcpp'
-$rc map normal Super n spawn 'foot -e newsraft'
-$rc map normal Super+Shift t spawn 'foot -e htop'
-$rc map normal Super u spawn 'foot -T pulsemixer -e pulsemixer'
-$rc map normal Super u spawn 'foot -T pulsemixer -e pulsemixer'
-$rc map normal Super y spawn 'foot -T youtube-launcher -e ~/.local/bin/yt-launcher.sh'
-$rc map normal Super+Shift y spawn 'foot -T youtube-downloader -e ~/.local/bin/yt-downloader.sh'
+$rc map normal $mod+Shift Return spawn foot
+$rc map normal $mod p spawn 'mew-run -i'
+$rc map normal $mod+Shift b spawn firefox
+$rc map normal $mod e spawn 'foot -e lf'
+$rc map normal $mod+Shift m  spawn 'foot -e ncmpcpp'
+$rc map normal $mod n spawn 'foot -e newsraft'
+$rc map normal $mod+Shift t spawn 'foot -e htop'
+$rc map normal $mod u spawn 'foot -T pulsemixer -e pulsemixer'
+$rc map normal $mod u spawn 'foot -T pulsemixer -e pulsemixer'
+$rc map normal $mod y spawn 'foot -T youtube-launcher -e ~/.local/bin/yt-launcher.sh'
+$rc map normal $mod+Shift y spawn 'foot -T youtube-downloader -e ~/.local/bin/yt-downloader.sh'
 
 # Volume
-$rc map normal Super w spawn 'bash ~/.local/bin/volume.sh up'
-$rc map normal Super s spawn 'bash ~/.local/bin/volume.sh down'
-$rc map normal Super+Shift s spawn 'bash ~/.local/bin/volume.sh mute'
+$rc map normal $mod w spawn 'bash ~/.local/bin/volume.sh up'
+$rc map normal $mod s spawn 'bash ~/.local/bin/volume.sh down'
+$rc map normal $mod+Shift s spawn 'bash ~/.local/bin/volume.sh mute'
 $rc map normal None XF86AudioRaiseVolume  spawn "bash ~/.local/bin/volume.sh up" 
 $rc map normal None XF86AudioLowerVolume  spawn "bash ~/.local/bin/volume.sh down" 
 $rc map normal None XF86AudioMute         spawn "bash ~/.local/bin/volume.sh mute"
-$rc map normal Super o spawn "pactl set-default-sink alsa_output.usb-HP_HP_Speaker_Bar-00.analog-stereo ; notify-send -t 8000 Output: Speaker"
-$rc map normal Super+Shift o  spawn "pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo ; notify-send -t 8000 Output: Headphones"
-$rc map normal Super b spawn 'pgrep dam && killall dam || slstatus -s | dam'
+$rc map normal $mod o spawn "pactl set-default-sink alsa_output.usb-HP_HP_Speaker_Bar-00.analog-stereo ; notify-send -t 8000 Output: Speaker"
+$rc map normal $mod+Shift o  spawn "pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo ; notify-send -t 8000 Output: Headphones"
+$rc map normal $mod b spawn 'pgrep dam && killall dam || slstatus -s | dam'
