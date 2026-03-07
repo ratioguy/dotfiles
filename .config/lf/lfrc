@@ -1,17 +1,23 @@
+# General Config
+set sortby name; set info size;
+
+# Set shell as command handler
+set shell sh
+
 # Functions
 
 # Create directories command
 cmd mkdir ${{
   echo "Directory Name: "
   read dirname
-  mkdir $dirname
+  mkdir "$dirname"
 }}
 
 # Create file command
 cmd mkfile ${{
   echo "File Name: "
   read filename
-  nvim $filename
+  nvim "$filename"
 }}
 
 # Mount Phone command
