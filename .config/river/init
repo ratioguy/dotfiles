@@ -8,7 +8,7 @@ mod=Super
 $rc map-switch normal lid open spawn 'sh ~/.local/bin/monitor-wl.sh'
 $rc map-switch normal lid close spawn 'sh ~/.local/bin/monitor-wl.sh'
 
-#tst
+# Screensharing
 systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
 systemctl --user restart xdg-desktop-portal
@@ -23,6 +23,20 @@ $rc spawn 'dunst'
 $rc spawn 'swaybg -m fill -i ~/Pictures/wallpapers/White-Mountain.jpg'
 $rc spawn 'slstatus -s | dam'
 
+# Hardware config
+
+# Mouse
+$rc input pointer-1133-16478-Logitech_M720_Triathlon accel-profile flat
+
+# Touchpad
+$rc input pointer-1267-12809-ELAN067D:00_04F3:3209_Touchpad accel-profile flat
+$rc input pointer-1267-12809-ELAN067D:00_04F3:3209_Touchpad tap enabled
+$rc input pointer-1267-12809-ELAN067D:00_04F3:3209_Touchpad middle-emulation enabled
+
+# Trackpoint
+$rc input pointer-2-10-TPPS/2_JYT_Synaptics_TrackPoint accel-profile flat
+
+
 # Floated Windows 
 $rc rule-add -app-id 'foot*' -title 'pulsemixer' float
 $rc rule-add -app-id 'foot*' -title 'youtube-launcher' float
@@ -34,7 +48,7 @@ $rc rule-add -app-id 'gimp-file-open*' float
 $rc rule-add -app-id 'dialog*' float
 
 # General Config
-#
+
 $rc set-cursor-warp on-focus-change
 $rc focus-follows-cursor always
 
@@ -48,8 +62,7 @@ $rc border-color-unfocused 0xd79920AA
 
 # Tiling Layout
 $rc default-layout riverdeck
-riverdeck -outer-gaps 0 -per-tag &
-
+$rt -inner-gaps 2 -per-tag -no-smart-gaps &
 
 # Keyboard Config
 $rc keyboard-layout -options "caps:escape" us
@@ -65,6 +78,12 @@ $rc map normal $mod K focus-view previous
 $rc map normal $mod+Shift J swap next
 $rc map normal $mod+Shift K swap previous
 $rc map normal $mod Return zoom 
+
+# Layout Bindings
+riverctl map normal $mod t     send-layout-cmd riverdeck "main-location-cycle left,monocle"
+riverctl map normal $mod M     send-layout-cmd riverdeck "main-location monocle"
+riverctl map normal $mod g     send-layout-cmd riverdeck "main-location grid"
+
 
 # Master resize
 $rc map normal $mod H send-layout-cmd $rt "main-ratio -0.05"
