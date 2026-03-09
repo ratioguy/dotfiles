@@ -16,7 +16,6 @@ alias bc="bc -l -q"
 
 # Startx as dbus-session
 alias startx="dbus-run-session startx"
-alias river="dbus-run-session river"
 
 # rerun last command
 alias !!="fc -s"

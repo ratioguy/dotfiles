@@ -1,6 +1,6 @@
 #!/bin/sh
 
-picom &
+ fastcompmgr &
 sh ~/.local/bin/monitor.sh
 xautocfg &
 redshift -O 5500
