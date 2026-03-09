@@ -16,12 +16,13 @@ systemctl --user restart xdg-desktop-portal
 # Autoload
 $rc spawn 'synchting --no-browser >> /dev/null'
 $rc spawn 'sh ~/.local/bin/monitor-wl.sh'
-$rc spawn 'gammastep -O 5500'
+$rc spawn 'mpd'
 $rc spawn 'mpd-mpris'
 $rc spawn 'playerctld'
 $rc spawn 'dunst'
 $rc spawn 'swaybg -m fill -i ~/Pictures/wallpapers/White-Mountain.jpg'
 $rc spawn 'slstatus -s | dam'
+$rc spawn 'clipcatd'
 
 # Hardware config
 
@@ -80,9 +81,9 @@ $rc map normal $mod+Shift K swap previous
 $rc map normal $mod Return zoom 
 
 # Layout Bindings
-riverctl map normal $mod t     send-layout-cmd riverdeck "main-location-cycle left,monocle"
-riverctl map normal $mod M     send-layout-cmd riverdeck "main-location monocle"
-riverctl map normal $mod g     send-layout-cmd riverdeck "main-location grid"
+riverctl map normal $mod t send-layout-cmd riverdeck "main-location-cycle left,monocle"
+riverctl map normal $mod M send-layout-cmd riverdeck "main-location monocle"
+riverctl map normal $mod g send-layout-cmd riverdeck "main-location grid"
 
 
 # Master resize
@@ -150,6 +151,18 @@ $rc map normal $mod u spawn 'foot -T pulsemixer -e pulsemixer'
 $rc map normal $mod y spawn 'foot -T youtube-launcher -e ~/.local/bin/yt-launcher.sh'
 $rc map normal $mod+Shift y spawn 'foot -T youtube-downloader -e ~/.local/bin/yt-downloader.sh'
 
+# Clipboard
+$rc map normal $mod v spawn 'clipcat-menu -f custom'
+$rc map normal $mod+Shift v spawn 'clipcatctl clear'
+
+# Screenshot
+$rc map normal $mod z spawn 'slurp | grim -g - - | tee ~/Pictures/Screenshots/Screenshot-$(date +%Y-%m-%d-%s).png ; notify-send "Screenshot taken."'
+$rc map normal $mod+Shift z spawn 'grim ~/Pictures/Screenshots/Screenshot-$(date +%Y-%m-%d-%s).png ; notify-send "Screenshot taken."'
+
+# Brightness
+$rc map normal None XF86MonBrightnessUp spawn "bash ~/.local/bin/brightness.sh up"
+$rc map normal None XF86MonBrightnessDown spawn "bash ~/.local/bin/brightness.sh down"
+
 # Volume
 $rc map normal $mod w spawn 'bash ~/.local/bin/volume.sh up'
 $rc map normal $mod s spawn 'bash ~/.local/bin/volume.sh down'
@@ -160,3 +173,8 @@ $rc map normal None XF86AudioMute         spawn "bash ~/.local/bin/volume.sh mut
 $rc map normal $mod o spawn "pactl set-default-sink alsa_output.usb-HP_HP_Speaker_Bar-00.analog-stereo ; notify-send -t 8000 Output: Speaker"
 $rc map normal $mod+Shift o  spawn "pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo ; notify-send -t 8000 Output: Headphones"
 $rc map normal $mod b spawn 'pgrep dam && killall dam || slstatus -s | dam'
+
+# Media Control
+$rc map normal $mod backslash spawn 'playerctl play-pause'
+$rc map normal $mod bracketright spawn 'playerctl next'
+$rc map normal $mod bracketleft spawn 'playerctl previous'
