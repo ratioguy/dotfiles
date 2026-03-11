@@ -1,8 +1,5 @@
 # My aliases
 
-# Doas aliases
-alias doasedit='doas nvim --clean'
-
 # Neovim aliases
 alias vim="nvim"
 alias ll="ls -lah"
