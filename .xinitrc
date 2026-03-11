@@ -10,6 +10,7 @@ mpd &
 mpd-mpris &
 playerctld &
 dunst &
+sh ~/.local/bin/middle-click.sh &
 clipmenud &
 slstatus &
 exec dwm
