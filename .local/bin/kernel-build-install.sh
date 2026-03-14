@@ -1,16 +1,23 @@
 #!/bin/sh
 
+# THIS SCRIPT iS VERY EXPERIMENTAL DO NOT RUN ON A DAILY DRIVER.
+
 # Run this script as the superuser.
 
-# This script is intended for Arch Linux, please modify to your systems needs, also this script is POSIX complient so no need for bash.
+# This script is intended for Debian Linux, please modify to your systems needs, also this script is POSIX complient so no need for bash.
 
-# To see how fast the kernel compiles run this script with the prefix time.
+# Run from the build dir
+
+# To see how fast the kernel compiles and installs, run this script with the prefix time.
+
+### Add whoami to check if root user.
+whoami
 
 # Welcome message.
 echo "Welcome, to the linux kernal compile script.\n"
 
 # Make (can specify threads instead of nproc).
-make -s -j$(( $(nproc) * 2 )) march=x86_64 
+make -s -j$(( $(nproc) * 2 )) march=x86_64
 
 # Make kernel modules.
 make modules
@@ -22,17 +29,18 @@ make modules_install
 make bzimage
 
 # Copies the kernel into the /boot directory.
-cp -v arch/x86/boot/bzImage /boot/vmlinuz-linux-based
+cp -vf arch/x86/boot/bzImage /boot/vmlinuz-linux-based$(uname -r)
 
 # Create initramfs image.
-mkinitcpio -k linux-based -g /boot/initramfs-linux-based.img
+mkinitcpio -k linux-based -g /boot/initramfs-linux-based$(uname -r).img
 
 # Copy the System.map file.
-cp /boot/System.map /boot/System.map-linux-based
-ln -sf /boot/System.map-linux-based /boot/System.map
+cp -vf System.map /boot/System-linux-based$(uname -r).map
+
 
 # Make the grub config.
-grub-mkconfig -o /boot/grub/grub.cfg
+# grub-mkconfig -o /boot/grub/grub.cfg
+update-grub
 
 # End of compile message.
 echo "\nCompile and install completed."
