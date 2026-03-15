@@ -63,7 +63,7 @@ map au unarchive
 map <f-2> rename
 
 # Directory shortcuts
-map sd cd /run/media/
+map sd cd /media/
 map sp cd /run/user/1000/gvfs
 map gd cd ~/Downloads
 map gp cd ~/Pictures/
