@@ -2,11 +2,10 @@
 
 # Neovim aliases
 alias vim="nvim"
+
+# Ls aliases
 alias ll="ls -lah"
 alias ls="ls --color"
-
-# Background alias
-alias bg="xwallpaper --zoom ~/Pictures/wallpapers/White-Mountain.jpg"
 
 # Bc alias
 alias bc="bc -l -q"
