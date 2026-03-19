@@ -20,14 +20,14 @@ cmd mkfile ${{
   nvim "$filename"
 }}
 
-# Mount Phone command
+# Mount Android Phone command
 cmd phone-mount ${{
   gio mount -li | awk -F= '{if(index($2,"mtp") == 1)system("gio mount "$2)}'
 }}
 
 # Archive binding
 cmd unarchive ${{
-  unp $f 
+  unp -u $f 
 }}
 
 # Set config options
