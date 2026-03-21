@@ -16,10 +16,10 @@ source ~/.config/aliasrc
 bind ^L=clear-screen
 
 # Bind history/text navigation
-bind ^[j=down-history
-bind ^[k=up-history
-bind ^[l=forward-char
-bind ^[h=backward-char
+# bind ^[j=down-history
+# bind ^[k=up-history
+# bind ^[l=forward-char
+# bind ^[h=backward-char
 
 # Make lf cd on exit
 lf () {
