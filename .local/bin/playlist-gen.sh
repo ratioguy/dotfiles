@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Make a Playlist automatically
-cd ~/Music/Based\ Music
-ls | grep m4a > ~/Music/Playlists/Based\ Music.m3u
-sed -i -e 's/^/Based Music\//' ~/Music/Playlists/Based\ Music.m3u 
+cd ~/Music/
+fdfind m4a > ~/Music/Playlists/Based\ Music.m3u
+fdfind mp3 >> ~/Music/Playlists/Based\ Music.m3u
+fdfind flac >> ~/Music/Playlists/Based\ Music.m3u
