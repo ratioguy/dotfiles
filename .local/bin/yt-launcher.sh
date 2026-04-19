@@ -1,5 +1,5 @@
 #!/bin/sh
 
-echo "Enter the launch Link:"
+echo "Enter the launch link:"
 read link
 setsid -f mpv $link
