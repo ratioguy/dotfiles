@@ -6,20 +6,11 @@ HISTFILE=~/.cache/mksh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
-# Set manpager to neovim
-export MANPAGER='nvim +Man!'
-
 # Source aliases from aliasrc
 source ~/.config/aliasrc
 
 # Bind ctrl + L to clear screen
 bind ^L=clear-screen
-
-# Bind history/text navigation
-# bind ^[j=down-history
-# bind ^[k=up-history
-# bind ^[l=forward-char
-# bind ^[h=backward-char
 
 # Make lf cd on exit
 lf () {
@@ -28,5 +19,5 @@ lf () {
 
 # Set enviornment Varibles
 export FZF_DEFAULT_COMMAND="fdfind . ~ --hidden"
-export EDITOR=nvim
+export EDITOR="vi"
 export PATH=~/.local/bin:$PATH

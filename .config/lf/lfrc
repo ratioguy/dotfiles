@@ -19,7 +19,7 @@ cmd mkfile ${{
   clear
   echo "File Name: "
   read filename
-  nvim "$filename"
+  $EDITOR "$filename"
 }}
 
 # Mount Android Phone command
@@ -72,7 +72,7 @@ map gp cd ~/Pictures/
 map gc cd ~/.config/
 map gs cd ~/Sync/
 map gm cd ~/Music/
-map gl  cd ~/.local/
+map gl cd ~/.local/
 map gb cd ~/.local/bin/
 map gr cd ~/.local/git/
 map gy cd ~/Downloads/Youtube/
