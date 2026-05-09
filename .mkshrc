@@ -1,23 +1,23 @@
-# PS1
+# PS1 style
 PS1="[\$USER@$(hostname) \$PWD]$ "
 
-# History file
+# Set history file/settings
 HISTFILE=~/.cache/mksh_history
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=10000
+SAVEHIST=10000
 
-# Source aliases from aliasrc
+# Source aliases from aliasrc file
 source ~/.config/aliasrc
 
 # Bind ctrl + L to clear screen
 bind ^L=clear-screen
 
-# Make lf cd on exit
+# Make lf change directory on exit
 lf () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
-# Set enviornment Varibles
+# Set shell enviornment Varibles
 export FZF_DEFAULT_COMMAND="fdfind . ~ --hidden"
 export EDITOR="vi"
 export PATH=~/.local/bin:$PATH
