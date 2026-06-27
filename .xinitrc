@@ -3,8 +3,8 @@
 fastcompmgr &
 sh ~/.local/bin/monitor.sh
 xautocfg &
-redshift -O 5500
-syncthing --no-browser >> /dev/null &
+redshift &
+killall sycthing ; syncthing --no-browser >> /dev/null &
 mpd &
 mpDris2 &
 playerctld &

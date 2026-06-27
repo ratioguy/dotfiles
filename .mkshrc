@@ -19,5 +19,6 @@ lf () {
 
 # Set shell enviornment Varibles
 export FZF_DEFAULT_COMMAND="fdfind . ~ --hidden"
-export EDITOR="vi"
+export EDITOR="nvim"
+export MANPAGER='nvim +Man!'
 export PATH=~/.local/bin:$PATH

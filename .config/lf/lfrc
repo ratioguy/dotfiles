@@ -29,7 +29,7 @@ cmd phone-mount ${{
 
 # Archive binding
 cmd unarchive ${{
-  unp -u $f
+  unp -u '$f'
 }}
 
 # Set config options
