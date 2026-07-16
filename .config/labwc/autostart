@@ -1,0 +1,3 @@
+syncthing --no-browser >/dev/null 2>&1 &
+dunst > /dev/null 2>&1 &
+swaybg -i ~/Pictures/wallpapers/White-Mountain.jpg

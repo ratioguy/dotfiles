@@ -1,0 +1,215 @@
+<labwc_config>
+
+<core>
+	<decoration>server</decoration>
+</core>
+
+<keyboard>
+
+	<layoutScope>global</layoutScope>
+
+	<repeatRate>50</repeatRate>
+	<repeatDelay>250</repeatDelay>
+
+	<keybind key="W-S-Return">
+		<action name="Execute" command="alacritty" />
+	</keybind>
+
+	<keybind key="W-S-c">
+		<action name="Close"/>
+	</keybind>
+
+	<keybind key="W-p">
+		<action name="Execute" command="mew-run" />
+	</keybind>
+
+	<keybind key="W-S-q">
+		<action name="Execute" command="labwc --exit" />
+	</keybind>
+
+	<keybind key="W-j">
+		<action name="NextWindow" />
+	</keybind>
+
+	<keybind key="W-k">
+		<action name="PreviousWindow" />
+	</keybind>
+
+	<keybind key="W-d">
+		<action name="ToggleShowDesktop" />
+	</keybind>
+
+	<keybind key="W-m">
+		<action name="ToggleMaximize" />
+	</keybind>
+
+	<keybind key="W-Left">
+		<action name="SnapToEdge" direction="left" combine="yes" />
+	</keybind>
+
+	<keybind key="W-Right">
+		<action name="SnapToEdge" direction="right" combine="yes" />
+	</keybind>
+
+	<keybind key="W-Up">
+		<action name="SnapToEdge" direction="up" combine="yes" />
+	</keybind>
+
+	<keybind key="W-Down">
+		<action name="SnapToEdge" direction="down" combine="yes" />
+	</keybind>
+
+	<keybind key="W-1">
+		<action name="GoToDesktop" to="Workspace 1" />
+	</keybind>
+
+	<keybind key="W-2">
+		<action name="GoToDesktop" to="Workspace 2" />
+	</keybind>
+
+	<keybind key="W-3">
+		<action name="GoToDesktop" to="Workspace 3" />
+	</keybind>
+
+	<keybind key="W-4">
+		<action name="GoToDesktop" to="Workspace 4" />
+	</keybind>
+
+	<keybind key="W-5">
+		<action name="GoToDesktop" to="Workspace 5" />
+	</keybind>
+
+	<keybind key="W-6">
+		<action name="GoToDesktop" to="Workspace 6" />
+	</keybind>
+
+	<keybind key="W-7">
+		<action name="GoToDesktop" to="Workspace 7" />
+	</keybind>
+
+	<keybind key="W-8">
+		<action name="GoToDesktop" to="Workspace 8" />
+	</keybind>
+
+	<keybind key="W-9">
+		<action name="GoToDesktop" to="Workspace 9" />
+	</keybind>
+
+	<keybind key="W-0">
+		<action name="GoToDesktop" to="Workspace 10" />
+	</keybind>
+
+	 <keybind key="W-b">
+		<action name="ToggleDecorations" />
+	</keybind>
+
+	<!-- My custom binds-->
+
+	<keybind key="W-S-b">
+		<action name="Execute" command="firefox" />
+	</keybind>
+
+	<keybind key="W-e">
+		<action name="Execute" command="alacritty -e lf" />
+	</keybind>
+
+	<keybind key="W-S-m">
+		<action name="Execute" command="alacritty -e ncmpcpp" />
+	</keybind>
+
+	<keybind key="W-n">
+		<action name="Execute" command="alacritty -e newsboat" />
+	</keybind>
+
+	<keybind key="W-S-t">
+		<action name="Execute" command="alacritty -e htop" />
+	</keybind>
+
+	<keybind key="W-u">
+		<action name="Execute" command="alacritty -e pulsemixer" />
+	</keybind>
+
+	<keybind key="W-y">
+		<action name="Execute" command="alacritty -e ~/.local/bin/yt-launcher" />
+	</keybind>
+	
+	<keybind key="W-S-y">
+		<action name="Execute" command="alacritty -e ~/.local/bin/yt-downloader" />
+	</keybind>
+
+	<keybind key="W-A-m">
+		<action name="Execute" command="alacritty -e ~/.local/bin/music-downloader" />
+	</keybind>
+
+	<keybind key="XF86AudioRaiseVolume">
+		<action name="Execute" command="bash ~/.local/bin/volume.sh up" />
+	</keybind>
+
+	<keybind key="XF86AudioLowerVolume">
+		<action name="Execute" command="bash ~/.local/bin/volume.sh down" />
+	</keybind>
+
+	<keybind key="XF86AudioMute">
+		<action name="Execute" command="bash ~/.local/bin/volume.sh mute" />
+	</keybind>
+
+	<keybind key="W-w">
+		<action name="Execute" command="bash ~/.local/bin/volume.sh up" />
+	</keybind>
+
+	<keybind key="W-s">
+		<action name="Execute" command="bash ~/.local/bin/volume.sh down" />
+	</keybind>
+
+	<keybind key="W-S-s">
+		<action name="Execute" command="bash ~/.local/bin/volume.sh mute" />
+	</keybind>
+
+	<keybind key="W-z">
+		<action name="Execute" command="bash ~/.local/bin/screenshot.sh select" />
+	</keybind>
+
+	<keybind key="W-S-z">
+		<action name="Execute" command="bash ~/.local/bin/screenshot.sh focused" />
+	</keybind>
+
+</keyboard>
+
+<focus>
+	<followMouse>yes</followMouse>
+</focus>
+
+    <desktops>
+      <popupTime>1500</popupTime>
+      <initial>Workspace 1</initial>
+      <names>
+        <name>Workspace 1</name>
+        <name>Workspace 2</name>
+        <name>Workspace 3</name>
+        <name>Workspace 4</name>
+        <name>Workspace 5</name>
+        <name>Workspace 6</name>
+        <name>Workspace 7</name>
+        <name>Workspace 8</name>
+        <name>Workspace 9</name>
+        <name>Workspace 10</name>
+      </names>
+    </desktops>
+
+<windowRules>
+	<windowRule identifier="*">
+		<action name="SetDecorations" decorations="border" />
+		<action name="AutoPlace" policy="center" />
+	</windowRule>
+</windowRules>
+
+  <libinput>
+    <device category="default">
+      <pointerSpeed>0.3</pointerSpeed>
+      <accelProfile>flat</accelProfile>
+      <tap>yes</tap>
+      <scrollFactor>1.0</scrollFactor>
+    </device>
+  </libinput>
+
+</labwc_config>
