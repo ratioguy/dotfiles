@@ -1,3 +1,9 @@
 syncthing --no-browser >/dev/null 2>&1 &
 dunst > /dev/null 2>&1 &
-swaybg -i ~/Pictures/wallpapers/White-Mountain.jpg
+swaybg -i ~/Pictures/wallpapers/White-Mountain.jpg &
+mpd &
+mpd-mpris &
+playerctld &
+wl-paste --type text --watch cliphist store &
+wl-clip-persist --clipboard regular &
+xfce4-panel &

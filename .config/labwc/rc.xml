@@ -20,7 +20,7 @@
 	</keybind>
 
 	<keybind key="W-p">
-		<action name="Execute" command="mew-run" />
+		<action name="Execute" command="mew-run -i" />
 	</keybind>
 
 	<keybind key="W-S-q">
@@ -28,15 +28,11 @@
 	</keybind>
 
 	<keybind key="W-j">
-		<action name="NextWindow" />
+		<action name="NextWindowImmediate" />
 	</keybind>
 
 	<keybind key="W-k">
-		<action name="PreviousWindow" />
-	</keybind>
-
-	<keybind key="W-d">
-		<action name="ToggleShowDesktop" />
+		<action name="PreviousWindowImmediate" />
 	</keybind>
 
 	<keybind key="W-m">
@@ -60,43 +56,83 @@
 	</keybind>
 
 	<keybind key="W-1">
-		<action name="GoToDesktop" to="Workspace 1" />
+		<action name="GoToDesktop" to="1" />
 	</keybind>
 
 	<keybind key="W-2">
-		<action name="GoToDesktop" to="Workspace 2" />
+		<action name="GoToDesktop" to="2" />
 	</keybind>
 
 	<keybind key="W-3">
-		<action name="GoToDesktop" to="Workspace 3" />
+		<action name="GoToDesktop" to="3" />
 	</keybind>
 
 	<keybind key="W-4">
-		<action name="GoToDesktop" to="Workspace 4" />
+		<action name="GoToDesktop" to="4" />
 	</keybind>
 
 	<keybind key="W-5">
-		<action name="GoToDesktop" to="Workspace 5" />
+		<action name="GoToDesktop" to="5" />
 	</keybind>
 
 	<keybind key="W-6">
-		<action name="GoToDesktop" to="Workspace 6" />
+		<action name="GoToDesktop" to="6" />
 	</keybind>
 
 	<keybind key="W-7">
-		<action name="GoToDesktop" to="Workspace 7" />
+		<action name="GoToDesktop" to="7" />
 	</keybind>
 
 	<keybind key="W-8">
-		<action name="GoToDesktop" to="Workspace 8" />
+		<action name="GoToDesktop" to="8" />
 	</keybind>
 
 	<keybind key="W-9">
-		<action name="GoToDesktop" to="Workspace 9" />
+		<action name="GoToDesktop" to="9" />
 	</keybind>
 
 	<keybind key="W-0">
-		<action name="GoToDesktop" to="Workspace 10" />
+		<action name="GoToDesktop" to="10" />
+	</keybind>
+
+	<keybind key="W-S-1">
+		<action name="SendToDesktop" to="1"  follow="no" />
+	</keybind>
+
+	<keybind key="W-S-2">
+		<action name="SendToDesktop" to="2" follow="no" />
+	</keybind>
+
+	<keybind key="W-S-3">
+		<action name="SendToDesktop" to="3" follow="no" />
+	</keybind>
+
+	<keybind key="W-S-4">
+		<action name="SendToDesktop" to="4" follow="no" />
+	</keybind>
+
+	<keybind key="W-S-5">
+		<action name="SendToDesktop" to="5" follow="no" />
+	</keybind>
+
+	<keybind key="W-S-6">
+		<action name="SendToDesktop" to="6" follow="no" />
+	</keybind>
+
+	<keybind key="W-S-7">
+		<action name="SendToDesktop" to="7" follow="no" />
+	</keybind>
+
+	<keybind key="W-S-8">
+		<action name="SendToDesktop" to="8" follow="no" />
+	</keybind>
+
+	<keybind key="W-S-9">
+		<action name="SendToDesktop" to="9" follow="no" />
+	</keybind>
+
+	<keybind key="W-S-0">
+		<action name="SendToDesktop" to="10" follow="no" />
 	</keybind>
 
 	 <keybind key="W-b">
@@ -130,15 +166,15 @@
 	</keybind>
 
 	<keybind key="W-y">
-		<action name="Execute" command="alacritty -e ~/.local/bin/yt-launcher" />
+		<action name="Execute" command="alacritty -e ~/.local/bin/yt-launcher.sh" />
 	</keybind>
 	
 	<keybind key="W-S-y">
-		<action name="Execute" command="alacritty -e ~/.local/bin/yt-downloader" />
+		<action name="Execute" command="alacritty -e ~/.local/bin/yt-downloader.sh" />
 	</keybind>
 
 	<keybind key="W-A-m">
-		<action name="Execute" command="alacritty -e ~/.local/bin/music-downloader" />
+		<action name="Execute" command="alacritty -e ~/.local/bin/music-downloader.sh" />
 	</keybind>
 
 	<keybind key="XF86AudioRaiseVolume">
@@ -173,6 +209,34 @@
 		<action name="Execute" command="bash ~/.local/bin/screenshot.sh focused" />
 	</keybind>
 
+	<keybind key="W-S-z">
+		<action name="Execute" command="bash ~/.local/bin/screenshot-wl.sh focused" />
+	</keybind>
+
+	<keybind key="W-S-z">
+		<action name="Execute" command="bash ~/.local/bin/screenshot-wl.sh focused" />
+	</keybind>
+
+	<keybind key="W-bracketright">
+		<action name="Execute" command="playerctl next" />
+	</keybind>
+
+	<keybind key="W-bracketleft">
+		<action name="Execute" command="playerctl previous" />
+	</keybind>
+
+	<keybind key="W-backslash">
+		<action name="Execute" command="playerctl play-pause" />
+	</keybind>
+
+	<keybind key="W-v">
+		<action name="Execute" command="~/.local/bin/clipboard.sh" />
+	</keybind>
+
+	<keybind key="W-S-v">
+		<action name="Execute" command="cliphist wipe" />
+	</keybind>
+
 </keyboard>
 
 <focus>
@@ -181,18 +245,18 @@
 
     <desktops>
       <popupTime>1500</popupTime>
-      <initial>Workspace 1</initial>
+      <initial>1</initial>
       <names>
-        <name>Workspace 1</name>
-        <name>Workspace 2</name>
-        <name>Workspace 3</name>
-        <name>Workspace 4</name>
-        <name>Workspace 5</name>
-        <name>Workspace 6</name>
-        <name>Workspace 7</name>
-        <name>Workspace 8</name>
-        <name>Workspace 9</name>
-        <name>Workspace 10</name>
+        <name>1</name>
+        <name>2</name>
+        <name>3</name>
+        <name>4</name>
+        <name>5</name>
+        <name>6</name>
+        <name>7</name>
+        <name>8</name>
+        <name>9</name>
+        <name>10</name>
       </names>
     </desktops>
 
