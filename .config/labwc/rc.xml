@@ -27,6 +27,11 @@
 		<action name="Execute" command="labwc --exit" />
 	</keybind>
 
+
+	<keybind key="W-S-f">
+		<action name="ToggleFullscreen" />
+	</keybind>
+
 	<keybind key="W-j">
 		<action name="NextWindowImmediate" />
 	</keybind>
@@ -135,11 +140,11 @@
 		<action name="SendToDesktop" to="10" follow="no" />
 	</keybind>
 
-	 <keybind key="W-b">
+	 <keybind key="W-g">
 		<action name="ToggleDecorations" />
 	</keybind>
 
-	<!-- My custom binds-->
+	<!-- My Binds-->
 
 	<keybind key="W-S-b">
 		<action name="Execute" command="firefox" />
@@ -201,20 +206,20 @@
 		<action name="Execute" command="bash ~/.local/bin/volume.sh mute" />
 	</keybind>
 
-	<keybind key="W-z">
-		<action name="Execute" command="bash ~/.local/bin/screenshot.sh select" />
+	<keybind key="W-o">
+		<action name="Execute" command="~/.local/bin/audio-output.sh speakers" />
+	</keybind>
+
+	<keybind key="W-S-o">
+		<action name="Execute" command="~/.local/bin/audio-output.sh headphones" />
 	</keybind>
 
 	<keybind key="W-S-z">
-		<action name="Execute" command="bash ~/.local/bin/screenshot.sh focused" />
+		<action name="Execute" command="bash ~/.local/bin/screenshot-wl.sh select" />
 	</keybind>
 
 	<keybind key="W-S-z">
-		<action name="Execute" command="bash ~/.local/bin/screenshot-wl.sh focused" />
-	</keybind>
-
-	<keybind key="W-S-z">
-		<action name="Execute" command="bash ~/.local/bin/screenshot-wl.sh focused" />
+		<action name="Execute" command="bash ~/.local/bin/screenshot-wl.sh screen" />
 	</keybind>
 
 	<keybind key="W-bracketright">
@@ -269,7 +274,7 @@
 
   <libinput>
     <device category="default">
-      <pointerSpeed>0.3</pointerSpeed>
+      <pointerSpeed>0.2</pointerSpeed>
       <accelProfile>flat</accelProfile>
       <tap>yes</tap>
       <scrollFactor>1.0</scrollFactor>

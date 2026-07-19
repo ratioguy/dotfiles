@@ -36,9 +36,12 @@ size = 14
 # Add bindings
 [keyboard]
 bindings = [
+    { key="+", mods="Control|Shift", action="IncreaseFontSize" },
+    { key="_", mods="Control|Shift", action="DecreaseFontSize" },
+    { key=")", mods="Control|Shift", action="ResetFontSize" },
     { key="PageUp", mods="Control|Shift", action="IncreaseFontSize" },
-    { key="PageUp", mods="Control|Shift", action="DecreaseFontSize" },
-    { key="PageDown", mods="Control|Shift", action="ResetFontSize" },
+    { key="PageDown", mods="Control|Shift", action="DecreaseFontSize" },
+    { key="Home", mods="Control|Shift", action="ResetFontSize" },
     { key="ArrowUp", mods="Control|Shift", action="ScrollLineUp" },
     { key="ArrowUp", mods="Control|Shift", action="ScrollLineUp" },
     { key="ArrowDown", mods="Control|Shift", action="ScrollLineDown" },

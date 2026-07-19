@@ -1,9 +1,15 @@
 syncthing --no-browser >/dev/null 2>&1 &
 dunst > /dev/null 2>&1 &
 swaybg -i ~/Pictures/wallpapers/White-Mountain.jpg &
-mpd &
 mpd-mpris &
+mpd &
 playerctld &
 wl-paste --type text --watch cliphist store &
 wl-clip-persist --clipboard regular &
 xfce4-panel &
+gammastep -c ~/.config/gamamstep/gammastep.conf &
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=labwc &
+systemctl --user restart xdg-desktop-portal &
+killall easyeffects &
+pactl set-default-sink alsa_output.usb-HP_HP_Speaker_Bar-00.analog-stereo &
