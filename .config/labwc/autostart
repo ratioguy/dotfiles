@@ -1,7 +1,7 @@
+#!/bin/sh
 syncthing --no-browser >/dev/null 2>&1 &
 dunst > /dev/null 2>&1 &
 swaybg -i ~/Pictures/wallpapers/White-Mountain.jpg &
-mpd-mpris &
 mpd &
 playerctld &
 wl-paste --type text --watch cliphist store &
