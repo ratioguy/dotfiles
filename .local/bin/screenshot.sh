@@ -1,15 +1,11 @@
 #!/bin/bash
-
-# Change if different username
-export GRIM_DEFAULT_DIR="/home/jim/Pictures/Screenshots"
-
 case $1 in
     select)
 	# Take screenshot at selection
-	grim -g "$(slurp)"
+	scrot --select --line mode=edge --freeze ~/Pictures/Screenshots/Screenshot-%Y-%m-%d.png -e "notify-send -t 2000 'Screenshot Taken.'"
 	;;
-    screen)
-	# Take screenshot of monitor
-	grim
+    focused)
+	# Take screenshot at focused window
+	scrot --focused --freeze ~/Pictures/Screenshots/Screenshot-%Y-%m-%d.png -e "notify-send -t 2000 'Screenshot Taken.'"
 	;;
 esac
