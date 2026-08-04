@@ -1,8 +1,13 @@
 #!/bin/sh
-# synchting --no-browser 2> /dev/null &
+gammastep -c /home/jim/.config/redshift.conf &
 syncthing --no-browser &>/dev/null
 dunst &>/dev/null
-#redshift
 playerctld &>/dev/null
 wl-paste --watch cliphist store &>/dev/null
 swaybg -m fill -i ~/Pictures/wallpapers/White-Mountain.jpg &>/dev/null
+
+# Screensharing
+export XDG_CURRENT_DESKTOP=sway
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+systemctl --user restart xdg-desktop-portal
