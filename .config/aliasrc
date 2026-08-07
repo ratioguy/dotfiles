@@ -16,9 +16,6 @@ alias startx="dbus-run-session startx"
 # rerun last command
 alias !!="fc -s"
 
-# make fdfind fd in debian
-alias fd="fdfind"
-
 # aliases for nvim
 alias vi="nvim"
 alias nvi="nvim"

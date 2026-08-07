@@ -16,5 +16,6 @@ cd xautocfg
 git pull
 sudo make install 
 nvim +PlugUpdate
+# flatpak run it.mijorus.gearlever
 
 # Nextvi not auto-updated with it
