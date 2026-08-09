@@ -5,7 +5,7 @@ dunst &>/dev/null
 playerctld &>/dev/null
 wl-paste --watch cliphist store &>/dev/null
 wl-clip-persist --clipboard regular &
-swaybg -m fill -i ~/Pictures/wallpapers/White-Mountain.jpg &>/dev/null
+swaybg -m fill -i ~/Pictures/wallpapers/rock.jxl &>/dev/null
 killall easyeffects &
 
 # Screensharing

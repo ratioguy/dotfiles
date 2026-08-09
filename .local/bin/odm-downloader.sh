@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Change to case
+# Add downloading folder.
+
 [ -d ~/Downloads/odm/.continue-file ] || mkdir -p ~/Downloads/odm/.continue-file 2> /dev/null
 
 

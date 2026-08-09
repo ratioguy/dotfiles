@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Simple updating script because I am lazy.
-sudo apt update && sudo apt upgrade
+#sudo apt update && sudo apt upgrade
+sudo pacman -Syu
 flatpak update
 yt-dlp --update
 cd ~/.local/git/build/clipmenu
