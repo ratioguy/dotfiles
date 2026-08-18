@@ -1,2 +1,2 @@
 #!/bin/sh
-dbus-run-session slstatus -s | dwl -s ~/.local/bin/autostart.sh
+slstatus -s | dbus-run-session dwl -s ~/.local/bin/autostart.sh
