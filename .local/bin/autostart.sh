@@ -1,8 +1,8 @@
 #!/bin/sh
 gammastep -c /home/jim/.config/gammastep/gammastep.conf &
-syncthing --no-browser &>/dev/null
-dunst &>/dev/null
+# syncthing --no-browser &>/dev/null
 playerctld &>/dev/null
+mpd &>/dev/null
 wl-paste --watch cliphist store &>/dev/null
 wl-clip-persist --clipboard regular &
 swaybg -m fill -i ~/Pictures/wallpapers/rock.jxl &>/dev/null

@@ -20,3 +20,8 @@ alias !!="fc -s"
 alias vi="nvim"
 alias nvi="nvim"
 alias nvim="nvim"
+
+# doas aliases
+alias doasedit="doas nvim --clean"
+
+alias fm='cd "$(command shfm "$@")"'
