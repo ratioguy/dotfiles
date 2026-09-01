@@ -6,6 +6,8 @@ read link
 echo "Download the playlist? (yes or no):"
 read answer
 
+setsid -f picard
+
 if [ $answer = yes ]; then
 	# Download playlists
 	yt-dlp $link  -f m4a -o '%(title)s.%(ext)s' -P ~/Music/ 
