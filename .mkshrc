@@ -1,5 +1,6 @@
 # PS1 style
-PS1="[\$USER@$(hostname) \$PWD]$ "
+export HOSTNAME=$(cat /etc/hostname)
+PS1="[\$USER@$HOSTNAME \$PWD]$ "
 
 # Set history file/settings
 HISTFILE=~/.cache/mksh_history
@@ -16,10 +17,3 @@ bind ^L=clear-screen
 lf () {
     cd "$(command lf -print-last-dir "$@")"
 }
-
-# Set shell enviornment Varibles
-export FZF_DEFAULT_COMMAND="fd . ~ --hidden"
-export EDITOR="nvim"
-export MANPAGER='nvim +Man!'
-export PATH=~/.local/bin:$PATH
-export PATH=/var/lib/flatpak/exports/bin:$PATH
