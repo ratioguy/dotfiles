@@ -21,7 +21,12 @@ alias vi="nvim"
 alias nvi="nvim"
 alias nvim="nvim"
 
-# doas aliases
+# doas alias
 alias doasedit="doas nvim --clean"
 
+# Shfm alias
 alias fm='cd "$(command shfm "$@")"'
+
+# foot client alias
+alias footerm="foot"
+alias foot="footclient"
