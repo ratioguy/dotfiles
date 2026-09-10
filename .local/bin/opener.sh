@@ -3,7 +3,7 @@
 # open file in application based on file extension
 
 	case $1 in
-	*.mp3|*.m4a|*.flac|*.wav)
+	*.mp3|*.m4a|*.flac|*.wav|*.opus)
 		mpv --no-video "$1"
 	;;
 
