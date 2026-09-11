@@ -11,7 +11,7 @@
 		mpv "$1"
 	;;
 
-	*.png|*.gif|*.jpg|*.jpe|*.jpeg|*.jxl|.webp)
+	*.png|*.gif|*.jpg|*.jpe|*.jpeg|*.jxl|*.webp)
 		imv-dir "$1"
 	;;
 

@@ -1,12 +1,13 @@
 #!/bin/sh
-gammastep -c /home/jim/.config/gammastep/gammastep.conf &
-syncthing --no-browser 2>&1 >> /dev/null &
-playerctld 2>&1 >> /dev/null &
-mpd 2&>1 >> /dev/null &
-wl-paste --watch cliphist store 2>&1 >> /dev/null &
+gammastep >> /dev/null 2>&1 &
+syncthing --no-browser >> /dev/null 2>&1 &
+playerctld >> /dev/null 2>&1 &
+mpd >> /dev/null 2>&1 &
+mpd-mpris >> /dev/null 2>&1 &
+wl-paste --watch cliphist store >> /dev/null 2>&1 &
 wl-clip-persist --clipboard regular &
-swaybg -m fill -i ~/Pictures/wallpapers/rock.jxl 2>&1 >> /dev/null &
-foot --server &
+swaybg -m fill -i ~/Pictures/wallpapers/rock.jxl >> /dev/null 2>&1 &
+foot --server >> /dev/null 2>&1 &
 killall easyeffects &
 
 # Screensharing
