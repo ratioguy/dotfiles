@@ -22,7 +22,6 @@ esc() {
 }
 
 term_setup() {
-    stty=$(stty -g)
     stty -icanon -echo
     esc screen_alt h
     esc DECAWM l
@@ -270,6 +269,7 @@ main() {
     cur=$1
 
     term_resize
+    stty=$(stty -g)
     term_setup
 
     trap 'term_reset'  EXIT INT
@@ -294,7 +294,7 @@ main() {
 		esc=0
                 if [ -d "$cur" ] && cd -- "$cur" >/dev/null 2>&1; then
                     set -- *
-                    y=1 y2=1 cur=$1 ltype=
+                    y=1 y2=1 cur=$1 ltype= hidden=
                     redraw "$@"
 
                 elif [ -e "$cur" ]; then
@@ -312,7 +312,7 @@ main() {
                 esac
 
                 set -- *
-                y=1 y2=1 cur=$1 hist=1
+                y=1 y2=1 cur=$1 hist=1 hidden=
                 redraw "$@"
             ;;
 
@@ -379,14 +379,14 @@ main() {
             -?)
                 cd -- "$OLDPWD" >/dev/null 2>&1|| continue
                 set -- *
-                y=1 y2=1 cur=$1
+                y=1 y2=1 cur=$1 hidden=
                 redraw "$@"
             ;;
 
             \~?)
                 cd || continue
                 set -- *
-                y=1 y2=1 cur=$1
+                y=1 y2=1 cur=$1 hidden=
                 redraw "$@"
             ;;
 
