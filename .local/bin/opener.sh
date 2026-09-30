@@ -11,7 +11,7 @@
 		mpv "$1"
 	;;
 
-	*.png|*.gif|*.jpg|*.jpe|*.jpeg|*.jxl|*.webp)
+	*.png|*.gif|*.jpg|*.jpe|*.jpeg|*.JPG|*.jxl|*.webp)
 		imv-dir "$1"
 	;;
 
@@ -20,7 +20,7 @@
 	;;
 
 	*.html|*.pdf)
-		firefox "$1"
+		mupdf-x11 "$1"
 	;;
 
 	*.zip)
@@ -33,6 +33,10 @@
 
 	*.xz)
 		xz -l "$1" | less
+	;;
+
+	*.rar)
+		unrar l "$1" | less
 	;;
 
 	# all other files
