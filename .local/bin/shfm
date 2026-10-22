@@ -316,6 +316,13 @@ main() {
                 redraw "$@"
             ;;
 
+            y?|E2) # COPY
+                   cmd_run "wl-copy" "$cur"
+                   redraw "$@"
+
+	    ;;
+
+
             g?)
                 case $y in
                     1) continue
@@ -404,6 +411,7 @@ main() {
                        'h - go up level' \
                        'g - go to top' \
                        'G - go to bottom' \
+                       'y - copy filename' \
                        'q - quit' \
                        ': - cd to <input>' \
                        '/ - search current directory <input>*' \
