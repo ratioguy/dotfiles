@@ -12,8 +12,3 @@ source ~/.config/aliasrc
 
 # Bind ctrl + L to clear screen
 bind ^L=clear-screen
-
-# Make lf change directory on exit
-lf () {
-    cd "$(command lf -print-last-dir "$@")"
-}
