@@ -83,8 +83,8 @@ def_key "g"
 
 #jump_to_position_in_song
 def_key "U"
-
   update_database
+
 def_key "s"
 
   reset_search_engine
@@ -110,7 +110,6 @@ def_key "right"
 
 def_key "y"
   dummy
-
 
 def_key "f"
   dummy

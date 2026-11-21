@@ -19,7 +19,7 @@
 		gimp "$1"
 	;;
 
-	*.html|*.pdf)
+	*.pdf)
 		mupdf-x11 "$1"
 	;;
 
@@ -36,7 +36,11 @@
 	;;
 
 	*.rar)
-		unrar l "$1" | less
+		7z l "$1" | less
+	;;
+	
+	*.htm|*.html)
+		firefox "$1"
 	;;
 
 	# all other files
